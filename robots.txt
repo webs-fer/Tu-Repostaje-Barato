@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Cambia TU_USUARIO por tu usuario real de GitHub.
+Sitemap: https://TU_USUARIO.github.io/tu-repostaje-barato/sitemap.xml

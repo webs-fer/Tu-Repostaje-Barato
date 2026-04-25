@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra la gasolina, el diésel y los puntos de recarga eléctrica más baratos cerca de ti. Mapa, ruta GPS, precios de carburantes, tiempo actual y búsqueda por ubicación.">
+  <meta name="keywords" content="gasolina barata, diésel barato, gasolineras baratas, precio gasolina hoy, precio gasóleo, repostaje barato, electrolineras, puntos de recarga, Albacete, España">
+  <meta name="author" content="Tu Repostaje Barato">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#071411">
+  <meta name="application-name" content="Tu Repostaje Barato">
+  <link rel="canonical" href="https://TU_USUARIO.github.io/tu-repostaje-barato/">
+  <title>Tu Repostaje Barato | Gasolina, diésel y recarga eléctrica cerca de ti</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Tu Repostaje Barato">
+  <meta property="og:title" content="Tu Repostaje Barato | Encuentra dónde repostar más barato">
+  <meta property="og:description" content="Compara gasolineras, diésel y puntos de recarga eléctrica cercanos con mapa, ruta GPS y tiempo actual.">
+  <meta property="og:url" content="https://TU_USUARIO.github.io/tu-repostaje-barato/">
+  <meta property="og:image" content="https://TU_USUARIO.github.io/tu-repostaje-barato/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tu Repostaje Barato, buscador de gasolineras y recarga eléctrica cerca de ti">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tu Repostaje Barato">
+  <meta name="twitter:description" content="Busca gasolina, diésel y recarga eléctrica barata cerca de ti con mapa y ruta GPS.">
+  <meta name="twitter:image" content="https://TU_USUARIO.github.io/tu-repostaje-barato/assets/img/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Tu Repostaje Barato",
+    "url": "https://TU_USUARIO.github.io/tu-repostaje-barato/",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "es-ES",
+    "description": "Aplicación web para localizar gasolina, diésel y puntos de recarga eléctrica cercanos, con mapa, ruta GPS, precio orientativo y tiempo actual.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Para qué sirve Tu Repostaje Barato?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sirve para localizar gasolineras baratas, diésel barato y puntos de recarga eléctrica cercanos, mostrando mapa, ruta GPS y datos del tiempo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona en móvil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La interfaz está adaptada para móvil y permite usar la ubicación del navegador para buscar opciones cercanas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿GitHub Pages ejecuta PHP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Esta versión estática usa HTML, CSS y JavaScript para funcionar en GitHub Pages sin PHP ni base de datos."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="app-shell">
+    <header class="hero glass">
+      <div class="hero__main">
+        <div class="title-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 21h10"></path>
+            <path d="M10 21c0-3 1-4 2-5 1 1 2 2 2 5"></path>
+            <path d="M8 3h8l2 5-6 8-6-8 2-5Z"></path>
+            <path d="M9.5 8h5"></path>
+          </svg>
+        </div>
+        <div class="hero__copy">
+          <span class="eyebrow">Buscador de gasolina, diésel y recarga eléctrica</span>
+          <h1>TU REPOSTAJE BARATO</h1>
+          <p>
+            Encuentra gasolina barata, diésel barato y puntos de recarga eléctrica cerca de ti. Consulta el mapa, abre la ruta GPS y revisa el tiempo antes de salir.
+          </p>
+        </div>
+      </div>
+
+      <div class="mode-picker" id="modePicker" role="tablist" aria-label="Selecciona tipo de repostaje">
+        <button class="mode-btn" type="button" data-mode="gasolina95" aria-pressed="false">
+          <span class="mode-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 4h7a2 2 0 0 1 2 2v14H6V6a2 2 0 0 1 2-2Z"></path>
+              <path d="M9 8h5"></path>
+              <path d="M17 7h1.8l2.2 2.5V16a1 1 0 0 1-1 1h-1"></path>
+              <path d="M6 20h12"></path>
+            </svg>
+          </span>
+          <span class="mode-btn__text">
+            <strong>Gasolina</strong>
+            <small>Ver gasolineras baratas</small>
+          </span>
+        </button>
+
+        <button class="mode-btn" type="button" data-mode="diesel" aria-pressed="false">
+          <span class="mode-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3c3.5 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2.5-6 6-10Z"></path>
+              <path d="M9.5 13.5c.8 1 1.6 1.5 2.5 1.5 1.2 0 2.1-.7 2.8-2"></path>
+            </svg>
+          </span>
+          <span class="mode-btn__text">
+            <strong>Diésel</strong>
+            <small>Encuentra el mejor precio</small>
+          </span>
+        </button>
+
+        <button class="mode-btn" type="button" data-mode="electrico" aria-pressed="false">
+          <span class="mode-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 6 13h5l-1 9 8-12h-5l0-8Z"></path>
+            </svg>
+          </span>
+          <span class="mode-btn__text">
+            <strong>Eléctrico</strong>
+            <small>Top de recarga EV</small>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <main id="dashboard" class="dashboard-grid dashboard-grid--hidden">
+      <section class="panel panel--summary glass" id="summaryPanel">
+        <div class="panel__head panel__head--summary">
+          <div>
+            <h2>Resumen</h2>
+            <p class="panel-subtitle">Usaremos tu ubicación actual. También puedes buscar otra zona.</p>
+          </div>
+          <span id="selectedModeBadge" class="badge">Selecciona una opción</span>
+        </div>
+
+        <div class="location-box">
+          <label for="locationQuery" class="location-label">Dónde estás</label>
+          <div class="location-row">
+            <input type="text" id="locationQuery" value="Detectando ubicación..." readonly>
+            <button id="refreshLocationBtn" class="ghost-btn" type="button">Mi ubicación</button>
+          </div>
+          <div class="location-actions">
+            <button id="toggleCustomBtn" class="link-btn" type="button">Usar otra ubicación</button>
+            <button id="searchBtn" class="btn-primary" type="button" disabled>Ver mejores opciones</button>
+          </div>
+          <div id="customLocationWrap" class="custom-location custom-location--hidden">
+            <input type="text" id="customLocationInput" placeholder="Escribe ciudad, barrio o dirección">
+            <small>Puedes poner, por ejemplo: Albacete, Toledo o Avenida de España 12.</small>
+          </div>
+        </div>
+
+        <div class="kpi-grid" id="kpiGrid">
+          <article class="kpi-card">
+            <span id="kpiCountLabel" class="kpi-label">Resultados</span>
+            <strong id="kpiCount">0</strong>
+            <small id="kpiCountSub">en tu zona</small>
+          </article>
+
+          <article class="kpi-card">
+            <span id="kpiPriceLabel" class="kpi-label">Mejor precio</span>
+            <strong id="kpiPrice">--</strong>
+            <small id="kpiPriceSub">dato principal</small>
+          </article>
+
+          <article class="kpi-card">
+            <span id="kpiDistanceLabel" class="kpi-label">Más cerca</span>
+            <strong id="kpiDistance">--</strong>
+            <small id="kpiDistanceSub">distancia</small>
+          </article>
+
+          <article class="kpi-card">
+            <span id="kpiUpdateLabel" class="kpi-label">Actualizado</span>
+            <strong id="kpiUpdate">--:--</strong>
+            <small id="kpiUpdateSub">última consulta</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel--list glass" id="topPanel">
+        <div class="panel__head">
+          <h2 id="mainTopTitle">Top más barato</h2>
+          <span class="badge badge--accent">Pulsa y abre ruta</span>
+        </div>
+        <div id="stationsList" class="card-list empty-state">Selecciona gasolina, diésel o eléctrico para empezar.</div>
+      </section>
+
+      <section class="panel panel--map glass">
+        <div class="panel__head">
+          <h2>Mapa</h2>
+          <span class="badge">Todos los puntos sobre el mapa</span>
+        </div>
+        <div id="map"></div>
+      </section>
+
+      <section class="panel panel--weather glass" id="weatherPanel">
+        <div class="panel__head">
+          <h2>Tiempo actual</h2>
+          <span class="badge">Temperatura y lluvia</span>
+        </div>
+        <div id="weatherContent" class="weather-box empty-state">Activa una opción para cargar el tiempo de tu zona.</div>
+      </section>
+    </main>
+
+    <section class="seo-content glass" aria-labelledby="seoTitle">
+      <div class="seo-content__inner">
+        <span class="eyebrow">Ahorra en cada desplazamiento</span>
+        <h2 id="seoTitle">Encuentra gasolineras baratas y puntos de recarga cerca de ti</h2>
+        <p>
+          <strong>Tu Repostaje Barato</strong> es una aplicación web gratuita para comparar opciones de repostaje en España.
+          Puedes buscar gasolina 95, diésel y recarga eléctrica por ubicación, ver los resultados en el mapa y abrir la ruta en Google Maps.
+        </p>
+
+        <div class="seo-grid">
+          <article>
+            <h3>Gasolina barata</h3>
+            <p>Localiza estaciones con buen precio de gasolina cerca de tu posición o en la ciudad que escribas.</p>
+          </article>
+          <article>
+            <h3>Diésel barato</h3>
+            <p>Compara gasolineras por distancia y precio para elegir dónde repostar gasóleo de forma más económica.</p>
+          </article>
+          <article>
+            <h3>Recarga eléctrica</h3>
+            <p>Consulta puntos de carga cercanos para vehículos eléctricos y abre la navegación GPS hacia el punto seleccionado.</p>
+          </article>
+        </div>
+
+        <details class="faq-item">
+          <summary>¿La web funciona en GitHub Pages?</summary>
+          <p>Sí. Esta edición no usa PHP ni base de datos: funciona con HTML, CSS, JavaScript y datos públicos consultados desde el navegador.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Por qué es útil activar la ubicación?</summary>
+          <p>La ubicación permite ordenar resultados cercanos, calcular distancias aproximadas y mostrar las mejores opciones en tu zona.</p>
+        </details>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
