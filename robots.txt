@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Cambia TU_USUARIO por tu usuario real de GitHub.
-Sitemap: https://TU_USUARIO.github.io/tu-repostaje-barato/sitemap.xml
+Sitemap: https://webs-fer.github.io/Tu-Repostaje-Barato/sitemap.xml
