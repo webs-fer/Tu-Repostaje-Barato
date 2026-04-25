@@ -1,33 +1,35 @@
 {
-  "updated_at": null,
-  "status": "pendiente",
+  "updated_at": "2026-04-25T22:44:37.096Z",
+  "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
-    "eurusd": "Frankfurter API (tipo EUR/USD, sin API key)",
-    "geopolitical": "GDELT DOC 2.0 API (noticias sobre petróleo, conflictos, sanciones y OPEP)"
+    "eurusd": "Frankfurter API (EUR/USD, sin API key)",
+    "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": null,
-    "latest_usd_per_barrel": null,
-    "previous_date": null,
-    "previous_usd_per_barrel": null,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-04-20",
+    "latest_usd_per_barrel": 103.4,
+    "previous_date": "2026-04-13",
+    "previous_usd_per_barrel": 123.28,
+    "change_7d_pct": -16.13,
+    "signal_eur_l_3d": -0.03
   },
   "eurusd": {
-    "latest_date": null,
-    "latest_rate": null,
-    "previous_date": null,
-    "previous_rate": null,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-04-24",
+    "latest_rate": 1.1712,
+    "previous_date": "2026-04-15",
+    "previous_rate": 1.178,
+    "change_7d_pct": -0.58,
+    "signal_eur_l_3d": 0.0009
   },
   "geopolitical": {
-    "level": "pendiente",
+    "level": "sin datos",
     "score": 0,
     "articles_analyzed": 0,
+    "high_risk_matches": 0,
     "signal_eur_l_3d": 0,
     "sample_titles": []
   },
-  "note": "Este archivo lo actualiza GitHub Actions con APIs gratuitas. Hasta la primera ejecución, la previsión usa sobre todo el histórico de gasolineras."
+  "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
+  "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
 }
