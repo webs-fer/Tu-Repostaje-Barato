@@ -1,0 +1,40 @@
+name: Actualizar histórico y mercado
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-datos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Actualizar histórico de precios
+        run: node scripts/update-historico-precios.mjs
+
+      - name: Actualizar datos de mercado
+        run: node scripts/update-mercado.mjs
+
+      - name: Guardar cambios en data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/historico-precios.json data/mercado.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios que guardar"
+          else
+            git commit -m "Actualizar histórico y mercado"
+            git push
+          fi
