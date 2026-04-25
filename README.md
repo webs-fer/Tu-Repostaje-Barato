@@ -99,6 +99,7 @@ Mejor usar un servidor local:
 ```bash
 python -m http.server 8000
 ```
+Actualización para activar GitHub Pages.
 
 Y abrir:
 
