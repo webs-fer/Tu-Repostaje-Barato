@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Encuentra la gasolina, el diésel y los puntos de recarga eléctrica más baratos cerca de ti. Mapa, ruta GPS, precios de carburantes, tiempo actual y búsqueda por ubicación.">
-  <meta name="keywords" content="gasolina barata, diésel barato, gasolineras baratas, precio gasolina hoy, precio gasóleo, repostaje barato, electrolineras, puntos de recarga, Albacete, España">
+  <meta name="description" content="Encuentra la gasolina, el diésel y los puntos de recarga eléctrica más baratos cerca de ti. Mapa, ruta GPS, precios de carburantes, tiempo actual, búsqueda por ubicación y previsión orientativa de tendencia de precios.">
+  <meta name="keywords" content="gasolina barata, diésel barato, gasolineras baratas, precio gasolina hoy, precio gasóleo, repostaje barato, previsión precio gasolina, previsión precio diésel, electrolineras, puntos de recarga, Albacete, España">
   <meta name="author" content="Tu Repostaje Barato">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#071411">
   <meta name="application-name" content="Tu Repostaje Barato">
   <link rel="canonical" href="https://webs-fer.github.io/Tu-Repostaje-Barato/">
-  <title>Tu Repostaje Barato | Gasolina, diésel y recarga eléctrica cerca de ti</title>
+  <title>Tu Repostaje Barato | Gasolina, diésel, recarga y previsión de precios</title>
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Tu Repostaje Barato">
   <meta property="og:title" content="Tu Repostaje Barato | Encuentra dónde repostar más barato">
-  <meta property="og:description" content="Compara gasolineras, diésel y puntos de recarga eléctrica cercanos con mapa, ruta GPS y tiempo actual.">
+  <meta property="og:description" content="Compara gasolineras, diésel y puntos de recarga eléctrica cercanos con mapa, ruta GPS, tiempo actual y previsión orientativa de precios.">
   <meta property="og:url" content="https://webs-fer.github.io/Tu-Repostaje-Barato/">
   <meta property="og:image" content="https://webs-fer.github.io/Tu-Repostaje-Barato/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tu Repostaje Barato">
-  <meta name="twitter:description" content="Busca gasolina, diésel y recarga eléctrica barata cerca de ti con mapa y ruta GPS.">
+  <meta name="twitter:description" content="Busca gasolina, diésel y recarga eléctrica barata cerca de ti con mapa, ruta GPS y tendencia orientativa de precios.">
   <meta name="twitter:image" content="https://webs-fer.github.io/Tu-Repostaje-Barato/assets/img/og-image.png">
 
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -49,7 +49,7 @@
     "applicationCategory": "TravelApplication",
     "operatingSystem": "Web",
     "inLanguage": "es-ES",
-    "description": "Aplicación web para localizar gasolina, diésel y puntos de recarga eléctrica cercanos, con mapa, ruta GPS, precio orientativo y tiempo actual.",
+    "description": "Aplicación web para localizar gasolina, diésel y puntos de recarga eléctrica cercanos, con mapa, ruta GPS, precio orientativo, tiempo actual y previsión orientativa de tendencia de precios.",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -216,6 +216,19 @@
           <span class="badge badge--accent">Pulsa y abre ruta</span>
         </div>
         <div id="stationsList" class="card-list empty-state">Selecciona gasolina, diésel o eléctrico para empezar.</div>
+
+        <aside id="forecastPanel" class="forecast-card forecast-card--hidden" aria-live="polite">
+          <div class="forecast-card__head">
+            <div>
+              <span class="forecast-kicker">Previsión orientativa</span>
+              <h3 id="forecastTitle">Tendencia próximos días</h3>
+            </div>
+            <span id="forecastBadge" class="forecast-badge">Datos</span>
+          </div>
+          <div id="forecastContent" class="forecast-content">
+            Elige gasolina o diésel para calcular la tendencia estimada.
+          </div>
+        </aside>
       </section>
 
       <section class="panel panel--map glass">
@@ -241,7 +254,7 @@
         <h2 id="seoTitle">Encuentra gasolineras baratas y puntos de recarga cerca de ti</h2>
         <p>
           <strong>Tu Repostaje Barato</strong> es una aplicación web gratuita para comparar opciones de repostaje en España.
-          Puedes buscar gasolina 95, diésel y recarga eléctrica por ubicación, ver los resultados en el mapa y abrir la ruta en Google Maps.
+          Puedes buscar gasolina 95, diésel y recarga eléctrica por ubicación, ver los resultados en el mapa, abrir la ruta en Google Maps y consultar una previsión orientativa de tendencia para los próximos días.
         </p>
 
         <div class="seo-grid">
@@ -251,7 +264,7 @@
           </article>
           <article>
             <h3>Diésel barato</h3>
-            <p>Compara gasolineras por distancia y precio para elegir dónde repostar gasóleo de forma más económica.</p>
+            <p>Compara gasolineras por distancia y precio para elegir dónde repostar gasóleo de forma más económica, con una previsión orientativa de tendencia.</p>
           </article>
           <article>
             <h3>Recarga eléctrica</h3>
@@ -266,6 +279,10 @@
         <details class="faq-item">
           <summary>¿Por qué es útil activar la ubicación?</summary>
           <p>La ubicación permite ordenar resultados cercanos, calcular distancias aproximadas y mostrar las mejores opciones en tu zona.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿La previsión de precios es exacta?</summary>
+          <p>No. Es una estimación orientativa basada en histórico de precios y tendencia reciente. Sirve como ayuda visual, pero los precios reales pueden cambiar sin previo aviso.</p>
         </details>
       </div>
     </section>

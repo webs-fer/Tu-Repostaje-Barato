@@ -1,6 +1,8 @@
 const ENDPOINTS = {
   fuelLive: 'https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/',
   fuelLocal: 'data/estaciones.json',
+  fuelHistory: 'data/historico-precios.json',
+  market: 'data/mercado.json',
   weather: 'https://api.open-meteo.com/v1/forecast',
   geocode: 'https://geocoding-api.open-meteo.com/v1/search',
   nominatimSearch: 'https://nominatim.openstreetmap.org/search',
@@ -21,6 +23,10 @@ const state = {
   defaultRadiusKm: 10,
   fuelDataCache: null,
   fuelDataSource: '',
+  fuelDataDate: '',
+  fuelHistoryCache: null,
+  marketCache: null,
+  localHistoryKey: 'trb_price_history_v1',
 };
 
 const el = {
@@ -34,6 +40,10 @@ const el = {
   refreshLocationBtn: document.getElementById('refreshLocationBtn'),
   searchBtn: document.getElementById('searchBtn'),
   stationsList: document.getElementById('stationsList'),
+  forecastPanel: document.getElementById('forecastPanel'),
+  forecastTitle: document.getElementById('forecastTitle'),
+  forecastContent: document.getElementById('forecastContent'),
+  forecastBadge: document.getElementById('forecastBadge'),
   weatherContent: document.getElementById('weatherContent'),
   mainTopTitle: document.getElementById('mainTopTitle'),
   kpiCountLabel: document.getElementById('kpiCountLabel'),
@@ -139,6 +149,22 @@ function parseSpanishFloat(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function toIsoDate(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function extractDatasetDate(value) {
+  if (!value) return '';
+  const text = String(value);
+  const match = text.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+  if (!match) return '';
+  const [, day, month, year] = match;
+  return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+}
+
 function haversineKm(lat1, lon1, lat2, lon2) {
   const earthRadius = 6371;
   const toRad = degrees => degrees * Math.PI / 180;
@@ -172,10 +198,12 @@ async function loadFuelData() {
   try {
     state.fuelDataCache = await fetchJson(ENDPOINTS.fuelLive, { cache: 'no-store' });
     state.fuelDataSource = 'API oficial en directo';
+    state.fuelDataDate = extractDatasetDate(state.fuelDataCache?.Fecha) || toIsoDate();
     return state.fuelDataCache;
   } catch (liveError) {
     state.fuelDataCache = await fetchJson(ENDPOINTS.fuelLocal);
     state.fuelDataSource = 'copia local incluida';
+    state.fuelDataDate = extractDatasetDate(state.fuelDataCache?.Fecha) || toIsoDate();
     return state.fuelDataCache;
   }
 }
@@ -419,6 +447,13 @@ function setSelectedMode(mode) {
   el.mainTopTitle.textContent = modeTitle(mode);
 
   if (mode === 'electrico') {
+    resetForecast('La previsión de tendencia se calcula solo para gasolina y diésel.');
+  } else {
+    el.forecastTitle.textContent = `Previsión ${modeLabel(mode).toLowerCase()} próximos días`;
+    el.forecastBadge.textContent = 'Calculando';
+  }
+
+  if (mode === 'electrico') {
     el.kpiCountLabel.textContent = 'Cargadores';
     el.kpiCountSub.textContent = 'dentro del radio';
     el.kpiPriceLabel.textContent = 'Tarifa desde';
@@ -545,6 +580,388 @@ function renderWeather(data) {
       <div><label>Máxima</label><span>${safeRound(max)}°</span></div>
       <div><label>Mínima</label><span>${safeRound(min)}°</span></div>
     </div>
+  `;
+}
+
+function resetForecast(message = 'Elige gasolina o diésel para calcular la tendencia estimada.') {
+  if (!el.forecastPanel) return;
+  el.forecastPanel.classList.add('forecast-card--hidden');
+  el.forecastTitle.textContent = 'Tendencia próximos días';
+  el.forecastBadge.textContent = 'Datos';
+  el.forecastContent.textContent = message;
+}
+
+async function loadFuelHistory() {
+  if (state.fuelHistoryCache) return state.fuelHistoryCache;
+  try {
+    state.fuelHistoryCache = await fetchJson(ENDPOINTS.fuelHistory, { cache: 'no-store' });
+  } catch {
+    state.fuelHistoryCache = { records: [] };
+  }
+  return state.fuelHistoryCache;
+}
+
+function localHistoryLocationKey(label) {
+  return String(label || 'sin-ubicacion')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 80) || 'sin-ubicacion';
+}
+
+function readLocalHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(state.localHistoryKey) || '{}');
+  } catch {
+    return {};
+  }
+}
+
+function writeLocalHistory(history) {
+  try {
+    localStorage.setItem(state.localHistoryKey, JSON.stringify(history));
+  } catch {
+    // Si el navegador bloquea localStorage, seguimos con el histórico del repositorio.
+  }
+}
+
+function computeCurrentFuelStats(items) {
+  const prices = (items || [])
+    .map(item => Number(item.price))
+    .filter(value => Number.isFinite(value) && value > 0)
+    .sort((a, b) => a - b);
+
+  if (!prices.length) return null;
+
+  const avg = prices.reduce((sum, value) => sum + value, 0) / prices.length;
+  const median = prices.length % 2
+    ? prices[Math.floor(prices.length / 2)]
+    : (prices[prices.length / 2 - 1] + prices[prices.length / 2]) / 2;
+
+  return {
+    date: state.fuelDataDate || toIsoDate(),
+    min: Number(prices[0].toFixed(3)),
+    avg: Number(avg.toFixed(3)),
+    median: Number(median.toFixed(3)),
+    count: prices.length,
+  };
+}
+
+function upsertLocalObservation(mode, locationLabel, stats) {
+  if (!stats || !stats.date || mode === 'electrico') return [];
+  const allHistory = readLocalHistory();
+  const locationKey = localHistoryLocationKey(locationLabel);
+  const key = `${mode}__${locationKey}`;
+  const existing = Array.isArray(allHistory[key]) ? allHistory[key] : [];
+  const withoutSameDay = existing.filter(entry => entry.date !== stats.date);
+  const next = [...withoutSameDay, stats]
+    .sort((a, b) => String(a.date).localeCompare(String(b.date)))
+    .slice(-30);
+  allHistory[key] = next;
+  writeLocalHistory(allHistory);
+  return next;
+}
+
+function officialHistorySeries(history, mode) {
+  return (history.records || [])
+    .map(record => {
+      const fuel = record.fuels?.[mode];
+      const value = Number(fuel?.min ?? fuel?.avg ?? fuel?.median);
+      if (!record.date || !Number.isFinite(value) || value <= 0) return null;
+      return {
+        date: record.date,
+        value,
+        source: 'Histórico nacional',
+        count: Number(fuel?.count || 0),
+      };
+    })
+    .filter(Boolean);
+}
+
+function mergeSeriesByDate(series) {
+  const map = new Map();
+  for (const point of series) {
+    if (!point?.date || !Number.isFinite(Number(point.value))) continue;
+    map.set(point.date, { ...point, value: Number(point.value) });
+  }
+  return [...map.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+
+function dateDiffDays(firstDate, secondDate) {
+  const first = new Date(`${firstDate}T00:00:00`);
+  const second = new Date(`${secondDate}T00:00:00`);
+  const diff = (second.getTime() - first.getTime()) / 86400000;
+  return Number.isFinite(diff) ? Math.max(diff, 0) : 0;
+}
+
+function calculateTrend(series) {
+  const clean = mergeSeriesByDate(series).slice(-14);
+  if (clean.length < 2) return null;
+
+  const firstDate = clean[0].date;
+  const xs = clean.map(point => dateDiffDays(firstDate, point.date));
+  const ys = clean.map(point => point.value);
+  const meanX = xs.reduce((sum, value) => sum + value, 0) / xs.length;
+  const meanY = ys.reduce((sum, value) => sum + value, 0) / ys.length;
+
+  let numerator = 0;
+  let denominator = 0;
+  xs.forEach((x, index) => {
+    numerator += (x - meanX) * (ys[index] - meanY);
+    denominator += (x - meanX) ** 2;
+  });
+
+  const slope = denominator > 0 ? numerator / denominator : 0;
+  const latest = clean.at(-1);
+  const projectedChange3Days = slope * 3;
+  const projectedPrice = latest.value + projectedChange3Days;
+
+  let direction = 'Estable';
+  let tone = 'No hay una señal clara de subida o bajada. Revisa el precio antes de salir.';
+  if (projectedChange3Days >= 0.015) {
+    direction = 'Subida moderada';
+    tone = 'Puede compensar repostar pronto si lo necesitas.';
+  } else if (projectedChange3Days >= 0.004) {
+    direction = 'Subida leve';
+    tone = 'Si tienes que repostar, quizá no convenga esperar demasiado.';
+  } else if (projectedChange3Days <= -0.015) {
+    direction = 'Bajada moderada';
+    tone = 'Si no tienes urgencia, podrías esperar y revisar mañana.';
+  } else if (projectedChange3Days <= -0.004) {
+    direction = 'Bajada leve';
+    tone = 'Podría bajar un poco; revisa antes de repostar.';
+  }
+
+  const confidence = clean.length >= 7 ? 'Alta' : clean.length >= 4 ? 'Media' : 'Baja';
+
+  return {
+    points: clean.length,
+    latest,
+    slope,
+    projectedChange3Days,
+    projectedPrice,
+    direction,
+    tone,
+    confidence,
+    firstDate: clean[0].date,
+    lastDate: latest.date,
+  };
+}
+
+function signedEuro(value) {
+  if (!Number.isFinite(Number(value))) return '--';
+  const sign = value > 0 ? '+' : value < 0 ? '-' : '±';
+  return `${sign}${Math.abs(value).toFixed(3).replace('.', ',')} €/l`;
+}
+
+function formatPlainPrice(value) {
+  if (!Number.isFinite(Number(value))) return '--';
+  return `${Number(value).toFixed(3).replace('.', ',')} €/l`;
+}
+
+function formatSignedPercent(value) {
+  if (!Number.isFinite(Number(value))) return '--';
+  const sign = value > 0 ? '+' : value < 0 ? '-' : '±';
+  return `${sign}${Math.abs(value).toFixed(2).replace('.', ',')} %`;
+}
+
+function formatMarketDate(value) {
+  if (!value) return 'sin fecha';
+  return String(value).slice(0, 10);
+}
+
+async function loadMarketData() {
+  if (state.marketCache !== null) return state.marketCache;
+  try {
+    state.marketCache = await fetchJson(ENDPOINTS.market, { cache: 'no-store' });
+    return state.marketCache;
+  } catch {
+    state.marketCache = null;
+    return null;
+  }
+}
+
+function clampNumber(value, min, max) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return 0;
+  return Math.min(max, Math.max(min, number));
+}
+
+function classifyTrend(change3Days) {
+  let direction = 'Estable';
+  let tone = 'No hay una señal clara de subida o bajada. Revisa el precio antes de salir.';
+
+  if (change3Days >= 0.018) {
+    direction = 'Subida probable';
+    tone = 'La combinación de histórico, Brent y contexto de mercado apunta a posible subida. Si necesitas repostar, puede compensar hacerlo pronto.';
+  } else if (change3Days >= 0.006) {
+    direction = 'Subida leve';
+    tone = 'Hay señales suaves de subida. Si vas justo de combustible, quizá no convenga esperar demasiado.';
+  } else if (change3Days <= -0.018) {
+    direction = 'Bajada probable';
+    tone = 'La señal combinada apunta a bajada. Si no tienes urgencia, podrías esperar y volver a revisar mañana.';
+  } else if (change3Days <= -0.006) {
+    direction = 'Bajada leve';
+    tone = 'Podría bajar algo, aunque la señal no es fuerte. Revisa la app antes de repostar.';
+  }
+
+  return { direction, tone };
+}
+
+function signalFromMarket(market, key) {
+  const signal = Number(market?.[key]?.signal_eur_l_3d);
+  return Number.isFinite(signal) ? signal : 0;
+}
+
+function enhanceTrendWithMarket(trend, market) {
+  if (!trend) return null;
+
+  const historicSignal = Number(trend.projectedChange3Days) || 0;
+  const brentSignal = signalFromMarket(market, 'brent');
+  const eurUsdSignal = signalFromMarket(market, 'eurusd');
+  const geoSignal = signalFromMarket(market, 'geopolitical');
+
+  // Fórmula visible para el usuario:
+  // 60% tendencia real de gasolineras + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.
+  const combinedChange = clampNumber(
+    historicSignal * 0.60 + brentSignal * 0.25 + eurUsdSignal * 0.10 + geoSignal * 0.05,
+    -0.06,
+    0.06
+  );
+
+  const classification = classifyTrend(combinedChange);
+  const marketAvailable = Boolean(market?.updated_at);
+  const confidence = trend.points >= 7 && marketAvailable ? 'Alta' : trend.points >= 4 || marketAvailable ? 'Media' : 'Baja';
+
+  return {
+    ...trend,
+    projectedChange3Days: combinedChange,
+    projectedPrice: Number(trend.latest?.value || 0) + combinedChange,
+    direction: classification.direction,
+    tone: classification.tone,
+    confidence,
+    marketUpdatedAt: market?.updated_at || '',
+    marketFactors: [
+      {
+        label: 'Histórico gasolineras',
+        value: signedEuro(historicSignal),
+        detail: `${trend.points} registros usados`,
+      },
+      {
+        label: 'Brent',
+        value: market?.brent?.change_7d_pct !== undefined && market?.brent?.change_7d_pct !== null ? formatSignedPercent(market.brent.change_7d_pct) : '--',
+        detail: market?.brent?.latest_usd_per_barrel ? `${Number(market.brent.latest_usd_per_barrel).toFixed(2).replace('.', ',')} $/barril` : 'pendiente de actualizar',
+      },
+      {
+        label: 'EUR/USD',
+        value: market?.eurusd?.change_7d_pct !== undefined && market?.eurusd?.change_7d_pct !== null ? formatSignedPercent(market.eurusd.change_7d_pct) : '--',
+        detail: market?.eurusd?.latest_rate ? `1 € = ${Number(market.eurusd.latest_rate).toFixed(4).replace('.', ',')} $` : 'pendiente de actualizar',
+      },
+      {
+        label: 'Riesgo geopolítico',
+        value: market?.geopolitical?.level ? String(market.geopolitical.level).toUpperCase() : '--',
+        detail: market?.geopolitical?.articles_analyzed ? `${market.geopolitical.articles_analyzed} noticias analizadas` : 'GDELT pendiente',
+      },
+    ],
+  };
+}
+
+function renderMarketFactors(trend) {
+  const factors = trend?.marketFactors || [];
+  if (!factors.length) return '';
+
+  return `
+    <div class="forecast-factors">
+      ${factors.map(factor => `
+        <div class="factor-card">
+          <label>${escapeHtml(factor.label)}</label>
+          <b>${escapeHtml(factor.value)}</b>
+          <small>${escapeHtml(factor.detail)}</small>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderForecastUnavailable(mode, stats) {
+  el.forecastPanel.classList.remove('forecast-card--hidden');
+  el.forecastTitle.textContent = `Previsión ${modeLabel(mode).toLowerCase()} próximos días`;
+  el.forecastBadge.textContent = 'Acumulando';
+  el.forecastContent.innerHTML = `
+    <div class="forecast-warning">
+      Todavía no hay suficiente histórico para estimar una tendencia fiable. La web guardará observaciones en este navegador y el workflow de GitHub Actions añadirá datos diarios al archivo <strong>data/historico-precios.json</strong>.
+    </div>
+    <div class="forecast-grid">
+      <div class="forecast-metric"><label>Precio mínimo actual</label><b>${formatPlainPrice(stats?.min)}</b></div>
+      <div class="forecast-metric"><label>Precio medio zona</label><b>${formatPlainPrice(stats?.avg)}</b></div>
+      <div class="forecast-metric"><label>Datos usados</label><b>${stats?.count || 0} estaciones</b></div>
+    </div>
+    <p class="forecast-note">La previsión aparecerá cuando haya al menos dos registros de fechas distintas. Es orientativa, no una garantía de precio.</p>
+  `;
+}
+
+async function renderForecast(items, mode) {
+  if (!el.forecastPanel) return;
+  if (mode === 'electrico') {
+    resetForecast('La previsión de tendencia se calcula solo para gasolina y diésel.');
+    return;
+  }
+
+  const stats = computeCurrentFuelStats(items);
+  if (!stats) {
+    renderForecastUnavailable(mode, null);
+    return;
+  }
+
+  const localSeries = upsertLocalObservation(mode, state.activeLocationLabel, stats)
+    .map(entry => ({ date: entry.date, value: Number(entry.min ?? entry.avg), source: 'Histórico local' }))
+    .filter(entry => Number.isFinite(entry.value));
+
+  const history = await loadFuelHistory();
+  const nationalSeries = officialHistorySeries(history, mode);
+  const currentPoint = { date: stats.date, value: stats.min, source: 'Consulta actual', count: stats.count };
+
+  const localTrend = calculateTrend([...localSeries, currentPoint]);
+  const nationalTrend = calculateTrend([...nationalSeries, currentPoint]);
+  const trend = localTrend || nationalTrend;
+  const sourceLabel = localTrend ? 'Histórico de tu zona' : 'Histórico nacional';
+
+  if (!trend) {
+    renderForecastUnavailable(mode, stats);
+    return;
+  }
+
+  const market = await loadMarketData();
+  const finalTrend = enhanceTrendWithMarket(trend, market);
+
+  el.forecastPanel.classList.remove('forecast-card--hidden');
+  el.forecastTitle.textContent = `Previsión ${modeLabel(mode).toLowerCase()} próximos días`;
+  el.forecastBadge.textContent = `Confianza ${finalTrend.confidence}`;
+
+  el.forecastContent.innerHTML = `
+    <div class="forecast-main">
+      <div class="forecast-direction">
+        <span>Tendencia combinada</span>
+        <strong>${escapeHtml(finalTrend.direction)}</strong>
+      </div>
+      <div class="forecast-projection">
+        <span>Estimación a 3 días</span>
+        <strong>${signedEuro(finalTrend.projectedChange3Days)}</strong>
+      </div>
+    </div>
+
+    <div class="forecast-grid">
+      <div class="forecast-metric"><label>Precio actual</label><b>${formatPlainPrice(stats.min)}</b></div>
+      <div class="forecast-metric"><label>Precio estimado</label><b>${formatPlainPrice(finalTrend.projectedPrice)}</b></div>
+      <div class="forecast-metric"><label>Histórico usado</label><b>${finalTrend.points} registros</b></div>
+    </div>
+
+    ${renderMarketFactors(finalTrend)}
+
+    <p class="forecast-advice"><strong>Consejo:</strong> ${escapeHtml(finalTrend.tone)}</p>
+    <p class="forecast-note">Fórmula: 60% histórico de gasolineras, 25% Brent, 10% EUR/USD y 5% riesgo geopolítico. Base histórica: ${escapeHtml(sourceLabel)} entre ${escapeHtml(finalTrend.firstDate)} y ${escapeHtml(finalTrend.lastDate)}. Mercado actualizado: ${escapeHtml(formatMarketDate(finalTrend.marketUpdatedAt))}. Es orientativa, no garantía de precio.</p>
   `;
 }
 
@@ -681,6 +1098,7 @@ async function runSearch() {
     el.searchBtn.disabled = true;
     el.searchBtn.textContent = 'Buscando...';
     renderEmptyTop('Buscando mejores opciones...');
+    resetForecast('Calculando tendencia cuando lleguen los precios...');
     await resolveActiveLocation();
 
     const { latitude, longitude } = state.activeCoords;
@@ -699,6 +1117,7 @@ async function runSearch() {
     fitMap(latitude, longitude, items);
     renderResults(items, state.selectedMode);
     updateKpis(items, state.selectedMode);
+    await renderForecast(items, state.selectedMode);
     renderWeather(weatherData);
 
     const suffix = state.selectedMode !== 'electrico' && state.fuelDataSource
@@ -707,6 +1126,7 @@ async function runSearch() {
     showToast(`Resultados actualizados para ${modeLabel(state.selectedMode).toLowerCase()}${suffix}.`);
   } catch (error) {
     renderEmptyTop(error.message || 'No se ha podido realizar la búsqueda.');
+    resetForecast('No se puede calcular la previsión hasta obtener resultados de precios.');
     showToast(error.message || 'No se ha podido realizar la búsqueda.', true);
   } finally {
     el.searchBtn.disabled = false;

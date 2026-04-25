@@ -27,7 +27,7 @@ https://fernando.github.io/tu-repostaje-barato/
 Busca:
 
 ```text
-https://TU_USUARIO.github.io/tu-repostaje-barato/
+https://webs-fer.github.io/Tu-Repostaje-Barato/
 ```
 
 y cámbialo por:
@@ -56,7 +56,7 @@ Cuando la web esté publicada:
 3. Envía el sitemap:
 
 ```text
-https://TU_USUARIO.github.io/tu-repostaje-barato/sitemap.xml
+https://webs-fer.github.io/Tu-Repostaje-Barato/sitemap.xml
 ```
 
 Cambiando `TU_USUARIO` por el usuario real.
@@ -64,3 +64,26 @@ Cambiando `TU_USUARIO` por el usuario real.
 ## 4. Aviso realista
 
 Tener SEO técnico no garantiza salir el primero en Google. Ayuda a que Google pueda rastrear e interpretar la web, pero para posicionar mejor harán falta visitas, enlaces externos, contenido útil y tiempo.
+
+
+## SEO añadido para previsión de precios
+
+Se han incorporado textos y metadatos relacionados con:
+
+- previsión precio gasolina próximos días;
+- previsión precio diésel;
+- tendencia precio carburantes;
+- cuándo repostar barato.
+
+La previsión es orientativa y se muestra debajo del bloque de resultados de gasolina/diésel.
+
+
+## Mejora SEO añadida: previsión orientativa
+
+La página ahora incluye contenido útil adicional sobre **previsión del precio de gasolina y diésel**, **Brent**, **EUR/USD** y **riesgo geopolítico**. Esto puede ayudar a captar búsquedas como:
+
+- gasolina barata cerca de mí
+- diésel más barato
+- previsión precio gasolina próximos días
+- precio diésel tendencia
+- cuándo repostar barato

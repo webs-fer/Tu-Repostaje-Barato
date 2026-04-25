@@ -1,0 +1,33 @@
+{
+  "updated_at": null,
+  "status": "pendiente",
+  "sources": {
+    "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
+    "eurusd": "Frankfurter API (tipo EUR/USD, sin API key)",
+    "geopolitical": "GDELT DOC 2.0 API (noticias sobre petróleo, conflictos, sanciones y OPEP)"
+  },
+  "brent": {
+    "latest_date": null,
+    "latest_usd_per_barrel": null,
+    "previous_date": null,
+    "previous_usd_per_barrel": null,
+    "change_7d_pct": null,
+    "signal_eur_l_3d": 0
+  },
+  "eurusd": {
+    "latest_date": null,
+    "latest_rate": null,
+    "previous_date": null,
+    "previous_rate": null,
+    "change_7d_pct": null,
+    "signal_eur_l_3d": 0
+  },
+  "geopolitical": {
+    "level": "pendiente",
+    "score": 0,
+    "articles_analyzed": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
+  },
+  "note": "Este archivo lo actualiza GitHub Actions con APIs gratuitas. Hasta la primera ejecución, la previsión usa sobre todo el histórico de gasolineras."
+}

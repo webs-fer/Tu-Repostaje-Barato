@@ -47,7 +47,7 @@ Folder: /root
 La URL quedará parecida a:
 
 ```text
-https://TU_USUARIO.github.io/tu-repostaje-barato/
+https://webs-fer.github.io/Tu-Repostaje-Barato/
 ```
 
 ## Paso SEO obligatorio cuando tengas la URL
@@ -62,7 +62,7 @@ Cuando GitHub Pages te dé la URL definitiva, cambia `TU_USUARIO` por tu usuario
 Ejemplo:
 
 ```text
-https://TU_USUARIO.github.io/tu-repostaje-barato/
+https://webs-fer.github.io/Tu-Repostaje-Barato/
 ```
 
 por:
@@ -80,7 +80,7 @@ Después de publicarla:
 3. Envía el sitemap:
 
 ```text
-https://TU_USUARIO.github.io/tu-repostaje-barato/sitemap.xml
+https://webs-fer.github.io/Tu-Repostaje-Barato/sitemap.xml
 ```
 
 4. Espera a que Google rastree e indexe la web.
@@ -99,10 +99,85 @@ Mejor usar un servidor local:
 ```bash
 python -m http.server 8000
 ```
-Actualización para activar GitHub Pages.
 
 Y abrir:
 
 ```text
 http://localhost:8000/
 ```
+
+
+## Previsión orientativa de precios
+
+Esta versión incluye una tarjeta de **Previsión orientativa** justo debajo del bloque **Top de gasolina/diésel más barato**.
+
+La previsión no promete un precio exacto: calcula una tendencia aproximada a 3 días usando:
+
+- el precio mínimo actual de los resultados encontrados;
+- el histórico local que guarda el navegador con `localStorage`;
+- el archivo `data/historico-precios.json`;
+- una acción automática de GitHub Actions que puede actualizar el histórico cada día.
+
+### Activar la actualización diaria en GitHub
+
+Al subir el proyecto, GitHub detectará el workflow:
+
+```text
+.github/workflows/actualizar-historico-precios.yml
+```
+
+Puedes ejecutarlo manualmente desde:
+
+```text
+Actions > Actualizar histórico de precios > Run workflow
+```
+
+Y también queda programado diariamente. Si el workflow no puede escribir en el repositorio, revisa:
+
+```text
+Settings > Actions > General > Workflow permissions > Read and write permissions
+```
+
+### URL SEO actual
+
+He dejado las URLs SEO preparadas para:
+
+```text
+https://webs-fer.github.io/Tu-Repostaje-Barato/
+```
+
+Si vuelves a cambiar usuario o nombre del repositorio, modifica esa URL en `index.html`, `robots.txt` y `sitemap.xml`.
+
+
+## Variables de mercado gratuitas añadidas
+
+La sección **Previsión orientativa** combina varias señales gratuitas:
+
+- **Histórico de gasolineras**: precios mínimos/medios guardados desde la API oficial de carburantes.
+- **Brent**: serie diaria DCOILBRENTEU de FRED en USD/barril, descargada como CSV sin clave.
+- **EUR/USD**: Frankfurter API, sin API key, para estimar si el petróleo en dólares pesa más o menos en Europa.
+- **Riesgo geopolítico**: GDELT DOC 2.0 API, sin API key, contando noticias sobre petróleo, conflictos, sanciones, OPEP, Rusia, Irán, Oriente Medio y suministro.
+
+La fórmula visible en la web es:
+
+```text
+60% histórico de gasolineras + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico
+```
+
+La previsión se muestra justo debajo del **Top de diésel/gasolina más barato** y es orientativa. No garantiza precios futuros.
+
+### Importante para GitHub Actions
+
+En tu repositorio, entra en:
+
+```text
+Settings > Actions > General > Workflow permissions
+```
+
+y marca:
+
+```text
+Read and write permissions
+```
+
+Después entra en **Actions**, ejecuta manualmente el workflow **Actualizar histórico y mercado** con `Run workflow`, o espera a la ejecución diaria.

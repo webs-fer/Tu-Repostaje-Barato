@@ -1,0 +1,28 @@
+{
+  "updated_at": "2026-04-25T00:00:00Z",
+  "source": "API oficial de precios de carburantes del Gobierno de España",
+  "scope": "España",
+  "note": "Histórico inicial incluido. GitHub Actions añadirá un registro diario cuando lo actives en el repositorio.",
+  "records": [
+    {
+      "date": "2026-04-04",
+      "timestamp": "04/04/2026 9:44:06",
+      "fuels": {
+        "gasolina95": {
+          "count": 11132,
+          "min": 1.247,
+          "avg": 1.556,
+          "median": 1.569,
+          "max": 2.099
+        },
+        "diesel": {
+          "count": 11868,
+          "min": 1.28,
+          "avg": 1.801,
+          "median": 1.829,
+          "max": 2.099
+        }
+      }
+    }
+  ]
+}
