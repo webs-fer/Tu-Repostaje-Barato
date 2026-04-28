@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T08:40:50.222Z",
+  "updated_at": "2026-04-28T08:39:13.781Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": -0.03
   },
   "eurusd": {
-    "latest_date": "2026-04-24",
-    "latest_rate": 1.1712,
+    "latest_date": "2026-04-27",
+    "latest_rate": 1.1749,
     "previous_date": "2026-04-17",
     "previous_rate": 1.1797,
-    "change_7d_pct": -0.72,
-    "signal_eur_l_3d": 0.0011
+    "change_7d_pct": -0.41,
+    "signal_eur_l_3d": 0.0006
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 10,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Курс долара сьогодні - які ціни в обмінниках 28 квітня 2026",
+      "Los altos precios de las demandas monopólicas",
+      "Ρούμπιο : « Οικονομικό πυρηνικό όπλο » του Ιράν το κλείσιμο των Στενών του Ορμούζ [ vid ]",
+      "Казахстан перераспределит экспорт 260 тысяч тонн нефти из - за « Дружбы »",
+      "俄鋼鐵大亨 「 159億超級遊艇 」 成功穿越荷莫茲 ！ | ETtoday國際新聞"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
