@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T07:58:26.183Z",
+  "updated_at": "2026-05-03T08:15:26.891Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,18 +17,25 @@
   "eurusd": {
     "latest_date": "2026-04-30",
     "latest_rate": 1.1702,
-    "previous_date": "2026-04-22",
-    "previous_rate": 1.1733,
-    "change_7d_pct": -0.26,
-    "signal_eur_l_3d": 0.0004
+    "previous_date": "2026-04-23",
+    "previous_rate": 1.1694,
+    "change_7d_pct": 0.07,
+    "signal_eur_l_3d": -0.0001
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 16,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Benzina , gli Stati Uniti al top dei rincari : i prezzi oltre i sei dollari al gallone . La situazione in Italia",
+      "Efectos de la guerra en Medio Oriente impactan en la aviación",
+      "Trump says US unlikely to accept Iran proposal - Pakistan Today",
+      "Middle East conflict could spur South - east Asia nuclear energy ambitions",
+      "Anche il Giappone torna ad acquistare greggio dalla Russia – Analisi Difesa"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
