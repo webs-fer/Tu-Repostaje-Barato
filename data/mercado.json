@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T09:59:00.031Z",
+  "updated_at": "2026-05-12T08:52:40.601Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,26 +15,26 @@
     "signal_eur_l_3d": 0.0172
   },
   "eurusd": {
-    "latest_date": "2026-05-08",
-    "latest_rate": 1.1761,
+    "latest_date": "2026-05-11",
+    "latest_rate": 1.1765,
     "previous_date": "2026-04-30",
     "previous_rate": 1.1702,
-    "change_7d_pct": 0.5,
+    "change_7d_pct": 0.54,
     "signal_eur_l_3d": -0.0008
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 12,
+    "high_risk_matches": 13,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "China confirms Trump visit this week",
-      "Ông Netanyahu gây bất ngờ khi muốn cắt đứt sự lệ thuộc vào viện trợ quân sự từ Mỹ",
-      "Roundup : Iran rejects U . S . ceasefire proposal , Trump deems it",
-      "2026年江西省委一号文件发布",
-      "Index - Belföld - Pósfai Gábor nem kíván rendőrminiszter lenni , három fontos tényezőt emelt ki - Élőben a Parlamentből , megkezdődtek Magyar Péter miniszterjelöltjeinek meghallgatásai"
+      "Call for  Swadeshi : Maharashtra Minister Bawankule backs PM Modi push to curb foreign imports in favour of local resources",
+      "该对译失在 《 红星照耀中国 》 中的红色印记地名正本清源了",
+      "Iran tuyên bố đã triển khai tàu ngầm mini để kiểm soát eo biển Hormuz",
+      "UK government borrowing costs hit 28 - year high on leadership uncertainty",
+      "나프타 대란에  당분간 컬러 불가 , 일본서  흑백  감자칩 등장"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
