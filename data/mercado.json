@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T09:18:22.571Z",
+  "updated_at": "2026-05-14T08:49:51.425Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,35 +7,28 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-05-01",
-    "latest_usd_per_barrel": 118.26,
-    "previous_date": "2026-04-24",
-    "previous_usd_per_barrel": 111.86,
-    "change_7d_pct": 5.72,
-    "signal_eur_l_3d": 0.0172
+    "latest_date": "2026-05-11",
+    "latest_usd_per_barrel": 106.11,
+    "previous_date": "2026-05-04",
+    "previous_usd_per_barrel": 0,
+    "change_7d_pct": null,
+    "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-05-12",
-    "latest_rate": 1.1738,
-    "previous_date": "2026-04-30",
-    "previous_rate": 1.1702,
-    "change_7d_pct": 0.31,
-    "signal_eur_l_3d": -0.0005
+    "latest_date": "2026-05-13",
+    "latest_rate": 1.1715,
+    "previous_date": "2026-05-04",
+    "previous_rate": 1.17,
+    "change_7d_pct": 0.13,
+    "signal_eur_l_3d": -0.0002
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 7,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Caucasian Knot | The number of injured in the drone attack in Kuban has increased .",
-      "Nilai Tukar Rupiah Ditutup Menguat ke Rp17 . 474 saat Dolar AS Tancap Gas",
-      "Security on a dying planet : why militarised politics are pushing us to the brink",
-      "Силуанов : ситуация в Ормузе и санкции против России чреваты рецессией в мире",
-      "President Trump set to meet with China Xi as Iran war and inflation weigh on his presidency"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
