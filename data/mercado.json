@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15T09:23:31.849Z",
+  "updated_at": "2026-05-16T08:19:23.089Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,26 +15,26 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-05-14",
-    "latest_rate": 1.1702,
-    "previous_date": "2026-05-05",
-    "previous_rate": 1.1686,
-    "change_7d_pct": 0.14,
-    "signal_eur_l_3d": -0.0002
+    "latest_date": "2026-05-15",
+    "latest_rate": 1.1628,
+    "previous_date": "2026-05-06",
+    "previous_rate": 1.1762,
+    "change_7d_pct": -1.14,
+    "signal_eur_l_3d": 0.0017
   },
   "geopolitical": {
     "level": "alto",
-    "score": 100,
+    "score": 96,
     "articles_analyzed": 50,
-    "high_risk_matches": 9,
+    "high_risk_matches": 6,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Iran urges BRICS nations to condemn war , Indian - flagged vessel sunk",
-      "Summitul Donald Trump - Xi Jinping a fost despre stabilizarea relației , dar nu a adus o rezolvare a punctelor majore de conflict",
-      "Peter Schiff Warns Iran  Will Win This War  Without Ground Invasion , Calls It Trump  Greatest Foreign P",
-      "China Serukan Perang Iran Dihentikan , Desak Semua Pihak Berdialog",
-      "CIA Ratcliffe visits Cuba as US demands political change"
+      "Iran Nyt | united states e Israele pronti a riattaccare dalla prossima settimana",
+      "Trump says Xi agrees Iran must open strait , China says war shouldnt have started",
+      "Merkez Bankası raporu ortaya koydu : İmamoğlu operasyonunun ekonomik faturası ağır oldu",
+      "Oil price shock to widen current account deficit , push inflation higher as US - Iran war continues , says economist Santosh Mehrotra",
+      "Shipping Tribune"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
