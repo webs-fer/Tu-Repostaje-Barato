@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16T08:19:23.089Z",
+  "updated_at": "2026-05-17T08:32:02.541Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,25 +17,18 @@
   "eurusd": {
     "latest_date": "2026-05-15",
     "latest_rate": 1.1628,
-    "previous_date": "2026-05-06",
-    "previous_rate": 1.1762,
-    "change_7d_pct": -1.14,
-    "signal_eur_l_3d": 0.0017
+    "previous_date": "2026-05-07",
+    "previous_rate": 1.177,
+    "change_7d_pct": -1.21,
+    "signal_eur_l_3d": 0.0018
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 96,
-    "articles_analyzed": 50,
-    "high_risk_matches": 6,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Iran Nyt | united states e Israele pronti a riattaccare dalla prossima settimana",
-      "Trump says Xi agrees Iran must open strait , China says war shouldnt have started",
-      "Merkez Bankası raporu ortaya koydu : İmamoğlu operasyonunun ekonomik faturası ağır oldu",
-      "Oil price shock to widen current account deficit , push inflation higher as US - Iran war continues , says economist Santosh Mehrotra",
-      "Shipping Tribune"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
