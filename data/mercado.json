@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-18T10:39:54.168Z",
+  "updated_at": "2026-05-19T10:05:03.721Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-05-15",
-    "latest_rate": 1.1628,
+    "latest_date": "2026-05-18",
+    "latest_rate": 1.1648,
     "previous_date": "2026-05-08",
     "previous_rate": 1.1761,
-    "change_7d_pct": -1.13,
-    "signal_eur_l_3d": 0.0017
+    "change_7d_pct": -0.96,
+    "signal_eur_l_3d": 0.0014
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 7,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Το Ιράν ανακοίνωσε νέα αρχή για τη διαχείριση των Στενών του Ορμούζ",
-      "Oil touches two - week high after drone attack on UAE nuclear power plant",
-      "Dış Politika Uzmanı Yücel : Çinin İrana baskı yapması gerçekçi değil - 18 . 05 . 2026 , Sputnik Türkiye",
-      "ট্রাম্পের পর পুতিন এবং ...",
-      "Nga tăng mạnh xuất khẩu năng lượng giúp hạ nhiệt thị trường toàn cầu năm 2026"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
