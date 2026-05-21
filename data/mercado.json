@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T09:53:12.730Z",
+  "updated_at": "2026-05-21T10:02:01.126Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,34 +7,34 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-05-11",
-    "latest_usd_per_barrel": 106.11,
-    "previous_date": "2026-05-04",
-    "previous_usd_per_barrel": 0,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-05-18",
+    "latest_usd_per_barrel": 116.73,
+    "previous_date": "2026-05-11",
+    "previous_usd_per_barrel": 106.11,
+    "change_7d_pct": 10.01,
+    "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-19",
-    "latest_rate": 1.162,
-    "previous_date": "2026-05-08",
-    "previous_rate": 1.1761,
-    "change_7d_pct": -1.2,
-    "signal_eur_l_3d": 0.0018
+    "latest_date": "2026-05-20",
+    "latest_rate": 1.16,
+    "previous_date": "2026-05-11",
+    "previous_rate": 1.1765,
+    "change_7d_pct": -1.4,
+    "signal_eur_l_3d": 0.0021
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 10,
+    "high_risk_matches": 11,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "India plans to send oil tankers through Strait of Hormuz for new supply amid Iran conflict disruptions",
-      "Сили оборони уразили НПЗ Лукойл - Нижегородоргсинтез та станцію Ярославль - 3 у РФ",
-      "Škoda Epiq chce přilákat nové zákazníky , ale pomůže i spalovacím modelům",
-      "Rusia - China teken 20 dokumen kerja sama strategis",
-      "British Airways cancels flights to seven major destinations"
+      "EasyJet boss says airline is  not seeing any disruption to fuel supply  – The Irish News",
+      "У росії створили дрон  Їжак , який здатен пошкоджувати броньовану техніку",
+      "東協財經 ／ 2026年5月21日東協快訊 | 產經",
+      "Rupee recovers to 96 . 43 after hitting 100 / USD in 1 - year forward market",
+      "Los colores de las renovables"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
