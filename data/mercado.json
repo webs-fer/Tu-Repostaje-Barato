@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-21T10:02:01.126Z",
+  "updated_at": "2026-05-22T09:48:26.803Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-20",
-    "latest_rate": 1.16,
-    "previous_date": "2026-05-11",
-    "previous_rate": 1.1765,
-    "change_7d_pct": -1.4,
-    "signal_eur_l_3d": 0.0021
+    "latest_date": "2026-05-21",
+    "latest_rate": 1.1599,
+    "previous_date": "2026-05-12",
+    "previous_rate": 1.1738,
+    "change_7d_pct": -1.18,
+    "signal_eur_l_3d": 0.0018
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 11,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "EasyJet boss says airline is  not seeing any disruption to fuel supply  – The Irish News",
-      "У росії створили дрон  Їжак , який здатен пошкоджувати броньовану техніку",
-      "東協財經 ／ 2026年5月21日東協快訊 | 產經",
-      "Rupee recovers to 96 . 43 after hitting 100 / USD in 1 - year forward market",
-      "Los colores de las renovables"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
