@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T08:44:15.180Z",
+  "updated_at": "2026-05-25T10:46:03.516Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,18 +17,25 @@
   "eurusd": {
     "latest_date": "2026-05-22",
     "latest_rate": 1.1595,
-    "previous_date": "2026-05-14",
-    "previous_rate": 1.1702,
-    "change_7d_pct": -0.91,
-    "signal_eur_l_3d": 0.0014
+    "previous_date": "2026-05-15",
+    "previous_rate": 1.1628,
+    "change_7d_pct": -0.28,
+    "signal_eur_l_3d": 0.0004
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 12,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Em nova ameaça , Marco Rubio diz que EUA podem buscar outro caminho caso negociao com Irã fracasse",
+      "Oljan faller på nya rykten",
+      "Kamei Conducts Japan First Ship - to - Ship HVO100 Biofuel Supply",
+      "Iran warns deal with US not yet close , despite some progress",
+      "Evropski indeksi u plusu , nafta Brent pala na manje od 100 dolara , optimizam na berzama"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
