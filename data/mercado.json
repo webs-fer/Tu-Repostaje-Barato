@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T10:46:03.516Z",
+  "updated_at": "2026-05-26T10:17:13.797Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,26 +15,26 @@
     "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-22",
-    "latest_rate": 1.1595,
+    "latest_date": "2026-05-25",
+    "latest_rate": 1.1643,
     "previous_date": "2026-05-15",
     "previous_rate": 1.1628,
-    "change_7d_pct": -0.28,
-    "signal_eur_l_3d": 0.0004
+    "change_7d_pct": 0.13,
+    "signal_eur_l_3d": -0.0002
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 12,
+    "high_risk_matches": 10,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Em nova ameaça , Marco Rubio diz que EUA podem buscar outro caminho caso negociao com Irã fracasse",
-      "Oljan faller på nya rykten",
-      "Kamei Conducts Japan First Ship - to - Ship HVO100 Biofuel Supply",
-      "Iran warns deal with US not yet close , despite some progress",
-      "Evropski indeksi u plusu , nafta Brent pala na manje od 100 dolara , optimizam na berzama"
+      "Medio Oriente , Khamenei :  Il Medio Oriente non farà più da scudo alle basi united states  - Liveblog - Notizie",
+      "خسارة عالمية نتيجة الهجمات الأمريكية الإيرانية الجديدة .. سعر الذهب اليوم الثلاثاء 26 - 5 - 2026 فى الصاغة",
+      "Kıtlık tehlikesi büyüyor !",
+      "Яка мелодрама найуспішніша в історії кіно : рейтинг Dengi . ua",
+      "Sulme amerikane në zonën e Hormuzit , Irani dhe SHBA në prag përshkallëzimi"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
