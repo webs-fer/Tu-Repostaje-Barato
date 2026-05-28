@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T10:18:10.905Z",
+  "updated_at": "2026-05-28T10:23:29.982Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-26",
-    "latest_rate": 1.1634,
-    "previous_date": "2026-05-15",
-    "previous_rate": 1.1628,
-    "change_7d_pct": 0.05,
-    "signal_eur_l_3d": -0.0001
+    "latest_date": "2026-05-27",
+    "latest_rate": 1.1637,
+    "previous_date": "2026-05-18",
+    "previous_rate": 1.1648,
+    "change_7d_pct": -0.09,
+    "signal_eur_l_3d": 0.0001
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 9,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Znów gorąco na Bliskim Wschodzie . Ropa w górę , ale złoty nie reaguje",
+      "Цены на нефть резко выросли после обмена ударами между США и Ираном",
+      "The 100 Best Artworks About America",
+      "India tops consumer confidence rankings with score of 66 . 6 in May",
+      "Borse in diretta , prezzo petrolio oggi 28 maggio | Europa debole con la ripresa delle ostilità tra united states ed Iran , su petrolio e gas"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
