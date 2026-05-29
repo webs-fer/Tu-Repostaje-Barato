@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T10:23:29.982Z",
+  "updated_at": "2026-05-29T10:13:00.004Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,34 +7,34 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-05-18",
-    "latest_usd_per_barrel": 116.73,
-    "previous_date": "2026-05-11",
-    "previous_usd_per_barrel": 106.11,
-    "change_7d_pct": 10.01,
-    "signal_eur_l_3d": 0.03
+    "latest_date": "2026-05-26",
+    "latest_usd_per_barrel": 102.75,
+    "previous_date": "2026-05-19",
+    "previous_usd_per_barrel": 114.64,
+    "change_7d_pct": -10.37,
+    "signal_eur_l_3d": -0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-27",
-    "latest_rate": 1.1637,
-    "previous_date": "2026-05-18",
-    "previous_rate": 1.1648,
-    "change_7d_pct": -0.09,
-    "signal_eur_l_3d": 0.0001
+    "latest_date": "2026-05-28",
+    "latest_rate": 1.1617,
+    "previous_date": "2026-05-19",
+    "previous_rate": 1.162,
+    "change_7d_pct": -0.03,
+    "signal_eur_l_3d": 0
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 9,
+    "high_risk_matches": 16,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Znów gorąco na Bliskim Wschodzie . Ropa w górę , ale złoty nie reaguje",
-      "Цены на нефть резко выросли после обмена ударами между США и Ираном",
-      "The 100 Best Artworks About America",
-      "India tops consumer confidence rankings with score of 66 . 6 in May",
-      "Borse in diretta , prezzo petrolio oggi 28 maggio | Europa debole con la ripresa delle ostilità tra united states ed Iran , su petrolio e gas"
+      "Leaders of ASEAN nations to meet with Putin at June summit in Russia",
+      "Эксперт Президентской академии в Санкт - Петербурге о подходах к росту производительности труда в топливно - энергетическом комплексе » Информационное агентство МАНГАЗЕЯ",
+      "المخابز الأعلى ، التموين : تحرير 4416 مخالفة تموينية خلال عيد الأضحى",
+      "« Κραχ Ουκρανίας » - Δεν αναχαιτίζουν ούτε έναν Kinzhal , « πέφτουν » οι άμυνες στο Donbass - Έκκληση SOS σε ΗΠΑ : Σταματήστε τη Ρωσία",
+      "Атака ВСУ на регионы России : удар по школе и детсаду"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
