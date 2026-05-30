@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T10:13:00.004Z",
+  "updated_at": "2026-05-30T08:39:41.791Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": -0.03
   },
   "eurusd": {
-    "latest_date": "2026-05-28",
-    "latest_rate": 1.1617,
-    "previous_date": "2026-05-19",
-    "previous_rate": 1.162,
-    "change_7d_pct": -0.03,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-05-29",
+    "latest_rate": 1.1644,
+    "previous_date": "2026-05-20",
+    "previous_rate": 1.16,
+    "change_7d_pct": 0.38,
+    "signal_eur_l_3d": -0.0006
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 16,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Leaders of ASEAN nations to meet with Putin at June summit in Russia",
-      "Эксперт Президентской академии в Санкт - Петербурге о подходах к росту производительности труда в топливно - энергетическом комплексе » Информационное агентство МАНГАЗЕЯ",
-      "المخابز الأعلى ، التموين : تحرير 4416 مخالفة تموينية خلال عيد الأضحى",
-      "« Κραχ Ουκρανίας » - Δεν αναχαιτίζουν ούτε έναν Kinzhal , « πέφτουν » οι άμυνες στο Donbass - Έκκληση SOS σε ΗΠΑ : Σταματήστε τη Ρωσία",
-      "Атака ВСУ на регионы России : удар по школе и детсаду"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
