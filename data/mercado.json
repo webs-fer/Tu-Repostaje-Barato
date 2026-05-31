@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30T08:39:41.791Z",
+  "updated_at": "2026-05-31T09:22:33.127Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,18 +17,25 @@
   "eurusd": {
     "latest_date": "2026-05-29",
     "latest_rate": 1.1644,
-    "previous_date": "2026-05-20",
-    "previous_rate": 1.16,
-    "change_7d_pct": 0.38,
+    "previous_date": "2026-05-21",
+    "previous_rate": 1.1599,
+    "change_7d_pct": 0.39,
     "signal_eur_l_3d": -0.0006
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 12,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "WEEK - END HISTOIRE ( 1 / 2 ) Au temps du Crav et des commandos viticoles , dès les années 60 , face au vin algérien",
+      "Militer AS Tembaki Kapal Gambia karena Melanggar Blokade Selat Hormuz",
+      "Hormuz to home : How Middle East conflict is rewriting your kitchen math Explained in 10 charts",
+      "Rachel Reeves confirms 53p rule for drivers until end of December 2026",
+      "A case for mainstreaming battery energy storage in Bangladesh"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
