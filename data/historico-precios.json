@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T12:08:28.787Z",
+  "updated_at": "2026-06-02T10:54:29.292Z",
   "source": "API oficial de precios de carburantes del Gobierno de España",
   "scope": "España",
   "note": "Histórico diario para calcular tendencia orientativa en GitHub Pages.",
@@ -885,6 +885,30 @@
           "max": 1.999,
           "p25": 1.574,
           "p75": 1.699
+        }
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "timestamp": "02/06/2026 12:53:54",
+      "fuels": {
+        "gasolina95": {
+          "count": 10864,
+          "min": 1.268,
+          "avg": 1.534,
+          "median": 1.559,
+          "max": 1.95,
+          "p25": 1.465,
+          "p75": 1.599
+        },
+        "diesel": {
+          "count": 11205,
+          "min": 1.339,
+          "avg": 1.629,
+          "median": 1.649,
+          "max": 1.999,
+          "p25": 1.569,
+          "p75": 1.695
         }
       }
     }
