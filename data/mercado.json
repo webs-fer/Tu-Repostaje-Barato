@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T10:11:31.494Z",
+  "updated_at": "2026-06-05T10:14:16.622Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-06-03",
-    "latest_rate": 1.1614,
-    "previous_date": "2026-05-25",
-    "previous_rate": 1.1643,
-    "change_7d_pct": -0.25,
-    "signal_eur_l_3d": 0.0004
+    "latest_date": "2026-06-04",
+    "latest_rate": 1.164,
+    "previous_date": "2026-05-26",
+    "previous_rate": 1.1634,
+    "change_7d_pct": 0.05,
+    "signal_eur_l_3d": -0.0001
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 11,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Stock Market Today : Dow Futures Gain , S & P 500 Slips As Trump Floats Meeting Iran Supreme Leader Lulule",
+      "Eksplodirao pomorski dron u rumunskoj luci Konstanca",
+      "Nóng : TP . HCM công bố đáp án đề thi lớp 10 TP . HCM 2026",
+      "Jeremy Clarkson deals with theft at Farmer Dog pub in Clarkson Farm",
+      "We could have lost the ship … - How the USS Gerald Ford escaped Iran ... hell"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
