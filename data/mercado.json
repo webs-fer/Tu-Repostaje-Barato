@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T10:14:16.622Z",
+  "updated_at": "2026-06-06T08:46:11.840Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,26 +15,26 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-06-04",
+    "latest_date": "2026-06-05",
     "latest_rate": 1.164,
-    "previous_date": "2026-05-26",
-    "previous_rate": 1.1634,
-    "change_7d_pct": 0.05,
-    "signal_eur_l_3d": -0.0001
+    "previous_date": "2026-05-27",
+    "previous_rate": 1.1637,
+    "change_7d_pct": 0.03,
+    "signal_eur_l_3d": 0
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 11,
+    "high_risk_matches": 14,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Stock Market Today : Dow Futures Gain , S & P 500 Slips As Trump Floats Meeting Iran Supreme Leader Lulule",
-      "Eksplodirao pomorski dron u rumunskoj luci Konstanca",
-      "Nóng : TP . HCM công bố đáp án đề thi lớp 10 TP . HCM 2026",
-      "Jeremy Clarkson deals with theft at Farmer Dog pub in Clarkson Farm",
-      "We could have lost the ship … - How the USS Gerald Ford escaped Iran ... hell"
+      "El Nino khó dự báo đe dọa nhiều khu vực tại châu Á",
+      "18h hôm nay mở toàn bộ nút giao Long Thành",
+      "रूस र युक्रेनबिच तनाव बढ्दै , ड्रोन आक्रमण र प्रतिकार जारी | Nepal first 24 - hour updated news portal",
+      "POPSI tekankan transparansi ekspor SDA agar petani sawit terlindungi",
+      "US military says it shot down Iranian missiles , drones launched toward Gulf allies , Strait of Hormuz"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
