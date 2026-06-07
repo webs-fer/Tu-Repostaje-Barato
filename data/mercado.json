@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T08:46:11.840Z",
+  "updated_at": "2026-06-07T09:33:06.412Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,25 +17,18 @@
   "eurusd": {
     "latest_date": "2026-06-05",
     "latest_rate": 1.164,
-    "previous_date": "2026-05-27",
-    "previous_rate": 1.1637,
-    "change_7d_pct": 0.03,
-    "signal_eur_l_3d": 0
+    "previous_date": "2026-05-28",
+    "previous_rate": 1.1617,
+    "change_7d_pct": 0.2,
+    "signal_eur_l_3d": -0.0003
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 14,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "El Nino khó dự báo đe dọa nhiều khu vực tại châu Á",
-      "18h hôm nay mở toàn bộ nút giao Long Thành",
-      "रूस र युक्रेनबिच तनाव बढ्दै , ड्रोन आक्रमण र प्रतिकार जारी | Nepal first 24 - hour updated news portal",
-      "POPSI tekankan transparansi ekspor SDA agar petani sawit terlindungi",
-      "US military says it shot down Iranian missiles , drones launched toward Gulf allies , Strait of Hormuz"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
