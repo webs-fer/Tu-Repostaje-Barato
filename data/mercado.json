@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T09:54:56.012Z",
+  "updated_at": "2026-06-15T12:39:49.107Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,25 +17,18 @@
   "eurusd": {
     "latest_date": "2026-06-12",
     "latest_rate": 1.1567,
-    "previous_date": "2026-06-04",
+    "previous_date": "2026-06-05",
     "previous_rate": 1.164,
     "change_7d_pct": -0.63,
     "signal_eur_l_3d": 0.0009
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 12,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Զելենսկի . Ուկրաինան հարվածել է Ռուսաստանի նավթային և քիմիական գործարաններին",
-      "UAE Business : Global volumes , capacity recover from holiday contraction",
-      "U . K . Intercepts Russian Shadow Fleet Vessel in English Channel",
-      "ईरान - अमेरिका डील : ट्रंप बोले , होर्मुज खुलेगा",
-      "Saudi Arabia awards LPG infrastructure development licences to top firms"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
