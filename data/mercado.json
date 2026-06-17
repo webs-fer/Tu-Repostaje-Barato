@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T11:32:30.298Z",
+  "updated_at": "2026-06-17T11:16:34.566Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,28 +7,35 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": null,
-    "latest_usd_per_barrel": null,
-    "previous_date": null,
-    "previous_usd_per_barrel": null,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-06-08",
+    "latest_usd_per_barrel": 97.46,
+    "previous_date": "2026-06-01",
+    "previous_usd_per_barrel": 98.29,
+    "change_7d_pct": -0.84,
+    "signal_eur_l_3d": -0.0025
   },
   "eurusd": {
-    "latest_date": "2026-06-15",
-    "latest_rate": 1.1607,
+    "latest_date": "2026-06-16",
+    "latest_rate": 1.1594,
     "previous_date": "2026-06-05",
     "previous_rate": 1.164,
-    "change_7d_pct": -0.28,
-    "signal_eur_l_3d": 0.0004
+    "change_7d_pct": -0.4,
+    "signal_eur_l_3d": 0.0006
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 10,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Why has inflation remained flat and where will it go from here ?",
+      "G7 - Gruppe macht der Ukraine neue Hoffnung",
+      "В Петербурге задержали бизнесмена Илью Трабера",
+      "USA in schwächerer Position als zu Beginn des Iran - Kriegs",
+      "Политолог объяснил мотивы США в возобновлении санкций против российской нефти"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
