@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17T11:16:34.566Z",
+  "updated_at": "2026-06-18T10:46:10.870Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,35 +7,28 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-06-08",
-    "latest_usd_per_barrel": 97.46,
-    "previous_date": "2026-06-01",
-    "previous_usd_per_barrel": 98.29,
-    "change_7d_pct": -0.84,
-    "signal_eur_l_3d": -0.0025
+    "latest_date": "2026-06-15",
+    "latest_usd_per_barrel": 84.36,
+    "previous_date": "2026-06-08",
+    "previous_usd_per_barrel": 97.46,
+    "change_7d_pct": -13.44,
+    "signal_eur_l_3d": -0.03
   },
   "eurusd": {
-    "latest_date": "2026-06-16",
-    "latest_rate": 1.1594,
-    "previous_date": "2026-06-05",
-    "previous_rate": 1.164,
-    "change_7d_pct": -0.4,
-    "signal_eur_l_3d": 0.0006
+    "latest_date": "2026-06-17",
+    "latest_rate": 1.1591,
+    "previous_date": "2026-06-08",
+    "previous_rate": 1.154,
+    "change_7d_pct": 0.44,
+    "signal_eur_l_3d": -0.0007
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 10,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Why has inflation remained flat and where will it go from here ?",
-      "G7 - Gruppe macht der Ukraine neue Hoffnung",
-      "В Петербурге задержали бизнесмена Илью Трабера",
-      "USA in schwächerer Position als zu Beginn des Iran - Kriegs",
-      "Политолог объяснил мотивы США в возобновлении санкций против российской нефти"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
