@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T09:30:14.264Z",
+  "updated_at": "2026-07-03T09:33:21.628Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-07-01",
-    "latest_rate": 1.1383,
-    "previous_date": "2026-06-22",
-    "previous_rate": 1.1456,
-    "change_7d_pct": -0.64,
-    "signal_eur_l_3d": 0.001
+    "latest_date": "2026-07-02",
+    "latest_rate": 1.1399,
+    "previous_date": "2026-06-23",
+    "previous_rate": 1.1392,
+    "change_7d_pct": 0.06,
+    "signal_eur_l_3d": -0.0001
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 96,
+    "articles_analyzed": 50,
+    "high_risk_matches": 6,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Drivers brace for impact as brakes hit on fuel tax cut",
+      "【 新聞直擊 】 談判黃了 ！ 伊朗死咬60億 叫板國際核查 | 美伊談判 | 卡塔爾 | 美最高法院",
+      "Im in two minds about climate change . But unlike Paulne Hanson , I believe the science",
+      "The AI Trade Has Three New Problems",
+      "Braun gas tax holiday explained including concerns about price gouging and road funding"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
