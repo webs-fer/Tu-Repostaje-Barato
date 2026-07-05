@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T08:49:20.390Z",
+  "updated_at": "2026-07-05T09:20:59.816Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,24 +17,24 @@
   "eurusd": {
     "latest_date": "2026-07-03",
     "latest_rate": 1.1448,
-    "previous_date": "2026-06-24",
-    "previous_rate": 1.134,
-    "change_7d_pct": 0.95,
+    "previous_date": "2026-06-25",
+    "previous_rate": 1.1342,
+    "change_7d_pct": 0.93,
     "signal_eur_l_3d": -0.0014
   },
   "geopolitical": {
     "level": "alto",
-    "score": 96,
+    "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 6,
+    "high_risk_matches": 7,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Drivers brace for impact as brakes hit on fuel tax cut",
-      "【 新聞直擊 】 談判黃了 ！ 伊朗死咬60億 叫板國際核查 | 美伊談判 | 卡塔爾 | 美最高法院",
-      "Im in two minds about climate change . But unlike Paulne Hanson , I believe the science",
-      "The AI Trade Has Three New Problems",
-      "Braun gas tax holiday explained including concerns about price gouging and road funding"
+      "AP News Summary at 3 : 37 a . m . EDT",
+      "Juego de tronos de Inditex y Santander en el Ibex : suman el 30 % de su capitalización en plena batalla por liderarlo",
+      "Altının onsunda 5 hafta sonra gelen yükseliş yatırımcısının yüzünü güldürdü",
+      "جريدة البلاد | زيلينسكي ينفي سقوط كوستيانتينيفكا ..  أكذوبة روسية",
+      "Jet2 set to make major announcement this week as holidaymakers head off"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
