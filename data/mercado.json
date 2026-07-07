@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T10:58:57.672Z",
+  "updated_at": "2026-07-07T09:58:54.514Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,26 +15,26 @@
     "signal_eur_l_3d": -0.0192
   },
   "eurusd": {
-    "latest_date": "2026-07-03",
-    "latest_rate": 1.1448,
+    "latest_date": "2026-07-06",
+    "latest_rate": 1.1415,
     "previous_date": "2026-06-26",
     "previous_rate": 1.1401,
-    "change_7d_pct": 0.41,
-    "signal_eur_l_3d": -0.0006
+    "change_7d_pct": 0.12,
+    "signal_eur_l_3d": -0.0002
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 17,
+    "high_risk_matches": 7,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Iran : Millions flock to Ali Khamenei funeral procession",
-      "Ђедовић Хандановић : Шест компанија заинтересовано за градњу РХЕ Ђердап 3",
-      "Эксперт : Россия ударами по Киеву уничтожает « глаза и руки » ВСУ :: Новости дня / ВЗГЛЯД",
-      "ウクライナの長距離攻撃をロシアと欧州はどう見たか 露経済に打撃 、 停戦論も台頭 世界の論点",
-      "Труд : ФАС завела дела на продавцов топлива в трёх регионах"
+      "Les pays du G20 encore prisonniers des fossiles | Techniques de lIngénieur",
+      "De la universidad para mayores a la ESO de adultos : Córdoba despliega su oferta para quienes quieren seguir aprendiendo",
+      "Трансформацию энергетической отрасли Российской Федерации обсудят на Сахалине",
+      "Иран нанес удар по судам в Ормузском проливе",
+      "Shell sees boost from oil price spike amid Iran war , but gas production hit"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
