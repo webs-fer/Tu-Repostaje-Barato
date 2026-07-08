@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T09:58:54.514Z",
+  "updated_at": "2026-07-08T08:42:27.439Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,34 +7,34 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-06-29",
-    "latest_usd_per_barrel": 71.59,
-    "previous_date": "2026-06-22",
-    "previous_usd_per_barrel": 76.49,
-    "change_7d_pct": -6.41,
-    "signal_eur_l_3d": -0.0192
+    "latest_date": null,
+    "latest_usd_per_barrel": null,
+    "previous_date": null,
+    "previous_usd_per_barrel": null,
+    "change_7d_pct": null,
+    "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-07-06",
-    "latest_rate": 1.1415,
+    "latest_date": "2026-07-07",
+    "latest_rate": 1.1433,
     "previous_date": "2026-06-26",
     "previous_rate": 1.1401,
-    "change_7d_pct": 0.12,
-    "signal_eur_l_3d": -0.0002
+    "change_7d_pct": 0.28,
+    "signal_eur_l_3d": -0.0004
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 7,
+    "high_risk_matches": 14,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Les pays du G20 encore prisonniers des fossiles | Techniques de lIngénieur",
-      "De la universidad para mayores a la ESO de adultos : Córdoba despliega su oferta para quienes quieren seguir aprendiendo",
-      "Трансформацию энергетической отрасли Российской Федерации обсудят на Сахалине",
-      "Иран нанес удар по судам в Ормузском проливе",
-      "Shell sees boost from oil price spike amid Iran war , but gas production hit"
+      "Возврат НДС по программе « ƏDV geri al » превысил 104 млн манатов за шесть месяцев",
+      "La piedra de Sísifo / Ken Salazar , el FBI , otro caso para la araña",
+      "A reizbucnit războiul din Iran : Armata americană a lansat „ o serie de lovituri puternice , după atacurile asupra unor petroliere în Strâmtoarea Ormuz",
+      "Más de 100 economistas del mundo exigen fin de medidas coercitivas contra Venezuela",
+      "US strikes  over 80  Iranian targets after tankers hit in Strait of Hormuz"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
