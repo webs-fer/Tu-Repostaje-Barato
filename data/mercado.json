@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T08:42:27.439Z",
+  "updated_at": "2026-07-09T10:00:41.684Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,35 +7,28 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": null,
-    "latest_usd_per_barrel": null,
-    "previous_date": null,
-    "previous_usd_per_barrel": null,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-07-06",
+    "latest_usd_per_barrel": 69.56,
+    "previous_date": "2026-06-29",
+    "previous_usd_per_barrel": 71.59,
+    "change_7d_pct": -2.84,
+    "signal_eur_l_3d": -0.0085
   },
   "eurusd": {
-    "latest_date": "2026-07-07",
-    "latest_rate": 1.1433,
-    "previous_date": "2026-06-26",
-    "previous_rate": 1.1401,
-    "change_7d_pct": 0.28,
-    "signal_eur_l_3d": -0.0004
+    "latest_date": "2026-07-08",
+    "latest_rate": 1.1404,
+    "previous_date": "2026-06-29",
+    "previous_rate": 1.1406,
+    "change_7d_pct": -0.02,
+    "signal_eur_l_3d": 0
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 14,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Возврат НДС по программе « ƏDV geri al » превысил 104 млн манатов за шесть месяцев",
-      "La piedra de Sísifo / Ken Salazar , el FBI , otro caso para la araña",
-      "A reizbucnit războiul din Iran : Armata americană a lansat „ o serie de lovituri puternice , după atacurile asupra unor petroliere în Strâmtoarea Ormuz",
-      "Más de 100 economistas del mundo exigen fin de medidas coercitivas contra Venezuela",
-      "US strikes  over 80  Iranian targets after tankers hit in Strait of Hormuz"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
