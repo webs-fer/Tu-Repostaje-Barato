@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T08:32:09.101Z",
+  "updated_at": "2026-07-20T09:32:12.061Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,24 +17,24 @@
   "eurusd": {
     "latest_date": "2026-07-17",
     "latest_rate": 1.1435,
-    "previous_date": "2026-07-09",
-    "previous_rate": 1.1435,
-    "change_7d_pct": 0,
-    "signal_eur_l_3d": 0
+    "previous_date": "2026-07-10",
+    "previous_rate": 1.143,
+    "change_7d_pct": 0.04,
+    "signal_eur_l_3d": -0.0001
   },
   "geopolitical": {
     "level": "alto",
     "score": 100,
     "articles_analyzed": 50,
-    "high_risk_matches": 24,
+    "high_risk_matches": 15,
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "US attacks Iran Revolutionary Guard over troops killed in Jordan",
-      "Nigerian children pay the price for the Iran war as malnutrition and poverty surge",
-      "Iránska armáda oznámila útoky na americké základne v Kuvajte",
-      "Két amerikai katona meghalt egy iráni támadásban , az Egyesült Államok újabb csapásokat mért Iránra",
-      "Estados Unidos intensifica su ofensiva contra Irán después de perder militares en Jordania"
+      "Šī ir pirmā reize , kad mēs ar kaut ko tādu saskaramies  – negaidīta atziņa no Maskavas",
+      "ЦБ купил юаней на внутреннем рынке на 4 , 8 миллиарда рублей",
+      "Ship ablaze in Strait of Hormuz after attack ; crew rescued : united kingdom maritime agency",
+      "Producția industrială din Republica Moldova a crescut cu peste 8 % în luna mai",
+      "Asya borsaları düşüşte ! ABD - İran gerilimi sürüyor"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
