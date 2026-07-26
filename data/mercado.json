@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T08:21:58.908Z",
+  "updated_at": "2026-07-26T08:38:04.172Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,25 +17,18 @@
   "eurusd": {
     "latest_date": "2026-07-24",
     "latest_rate": 1.1377,
-    "previous_date": "2026-07-15",
-    "previous_rate": 1.1406,
-    "change_7d_pct": -0.25,
-    "signal_eur_l_3d": 0.0004
+    "previous_date": "2026-07-16",
+    "previous_rate": 1.1467,
+    "change_7d_pct": -0.78,
+    "signal_eur_l_3d": 0.0012
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 8,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Nuovo Decreto Carburanti : arriva il nuovo taglio accise contro il caro benzina",
-      "GCCs may account for nearly half of India office leasing in 2026 : Report",
-      "原油LOF被爆炒 ， 盘中溢价超33 %！ 基金公司密集停牌",
-      "Κλιμακώνεται η σύγκρουση ΗΠΑ - Ιράν : Νέα πλήγματα , απειλές και επέκταση της κρίσης στη Μέση Ανατολή",
-      "Zachód może popełnić błąd . Drony nie są cudowną bronią [ OPINIA ]"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
