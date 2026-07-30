@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T08:53:26.137Z",
+  "updated_at": "2026-07-30T08:46:06.655Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,35 +7,28 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": null,
-    "latest_usd_per_barrel": null,
-    "previous_date": null,
-    "previous_usd_per_barrel": null,
-    "change_7d_pct": null,
-    "signal_eur_l_3d": 0
+    "latest_date": "2026-07-27",
+    "latest_usd_per_barrel": 91.82,
+    "previous_date": "2026-07-20",
+    "previous_usd_per_barrel": 86.99,
+    "change_7d_pct": 5.55,
+    "signal_eur_l_3d": 0.0166
   },
   "eurusd": {
-    "latest_date": "2026-07-28",
-    "latest_rate": 1.1367,
-    "previous_date": "2026-07-17",
-    "previous_rate": 1.1435,
-    "change_7d_pct": -0.59,
-    "signal_eur_l_3d": 0.0009
+    "latest_date": "2026-07-29",
+    "latest_rate": 1.138,
+    "previous_date": "2026-07-20",
+    "previous_rate": 1.1426,
+    "change_7d_pct": -0.4,
+    "signal_eur_l_3d": 0.0006
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 17,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Despite high inflation , Fed expected to hold rates steady for now",
-      "Iran Missile Attack and US - Saudi Strikes Raise Regional Tensions",
-      "Selenskyj trifft Trump : Patriot - Raketen und Drohnen - Expertise",
-      "Reckitt raising prices to offset cost pressures amid Iran war",
-      "地缘风险推升避险需求 ， 美联储决议前美元指数维持高位震荡 _ 汇市观察 _ 外汇 _ 中金在线"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
