@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T08:35:38.477Z",
+  "updated_at": "2026-08-03T10:03:29.277Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,18 +17,25 @@
   "eurusd": {
     "latest_date": "2026-07-31",
     "latest_rate": 1.1485,
-    "previous_date": "2026-07-23",
-    "previous_rate": 1.1392,
-    "change_7d_pct": 0.82,
-    "signal_eur_l_3d": -0.0012
+    "previous_date": "2026-07-24",
+    "previous_rate": 1.1377,
+    "change_7d_pct": 0.95,
+    "signal_eur_l_3d": -0.0014
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 8,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Ο Τραμπ μιλάει για συνομιλίες , αλλά απειλεί με επίθεση « επιπέδου Β  Παγκοσμίου » - CENTCOM : « Θέλουμε ιδέες » για το Ιράν",
+      "Στον Περσικό , ο Τραμπ μοιάζει με τον ΣΥΡΙΖΑ του 2015 - Η ΔΕΗ & οι κινήσεις Alpha στα ακίνητα - Μετωπική ΠΑΣΟΚ - ΕΛΑΣ",
+      "Almost £200 , 000 of fuel stolen from united kingdom forecourts each day during Iran war",
+      "Pemex gana en 2T ; presidentes de bancos ; Infantino a la baja ¿ Femexfut ?",
+      "Sensex soars over 700 points , Nifty crosses 24 , 500 on softer crude prices , easing geopolitical risks"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
