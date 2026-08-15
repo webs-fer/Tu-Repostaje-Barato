@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T07:47:27.598Z",
+  "updated_at": "2026-08-15T06:55:30.056Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0
   },
   "eurusd": {
-    "latest_date": "2026-08-13",
-    "latest_rate": 1.1534,
-    "previous_date": "2026-08-04",
-    "previous_rate": 1.1515,
-    "change_7d_pct": 0.17,
-    "signal_eur_l_3d": -0.0003
+    "latest_date": "2026-08-14",
+    "latest_rate": 1.1567,
+    "previous_date": "2026-08-05",
+    "previous_rate": 1.1554,
+    "change_7d_pct": 0.11,
+    "signal_eur_l_3d": -0.0002
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 9,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Mỹ cảnh báo  cô lập kinh tế  Iran",
-      "Indian benchmark indices open lower amid range - bound trade ; Nifty slips over 75 points",
-      "Benzin , Motorin Ve LPGde KDV Kalkarsa Fiyatlar Ne Olur ?",
-      "Mỹ cảnh báo cô lập kinh tế Iran ở mức  chưa từng thấy",
-      "闪充 、 智驾 、 大空间全给齐 ， 秦MAX专治年轻人的 ″ 既要又要 ″"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
