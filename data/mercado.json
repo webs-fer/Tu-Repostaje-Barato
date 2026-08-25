@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T07:17:36.936Z",
+  "updated_at": "2026-08-25T07:05:36.688Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": 0.0065
   },
   "eurusd": {
-    "latest_date": "2026-08-21",
-    "latest_rate": 1.1699,
-    "previous_date": "2026-08-14",
-    "previous_rate": 1.1567,
-    "change_7d_pct": 1.14,
-    "signal_eur_l_3d": -0.0017
+    "latest_date": null,
+    "latest_rate": null,
+    "previous_date": null,
+    "previous_rate": null,
+    "change_7d_pct": null,
+    "signal_eur_l_3d": 0
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 11,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "카네비모빌리티 ,  민군협력 엑스포  서 미래 모빌리티 통합 기술 공개",
+      "Sada će platiti cenu ! Pobijena deca u vrtiću ! Eksplozije u Rusiji , zakleli se na odmazdu !",
+      "Петролен танкер е бил ударен край бреговете на Оман",
+      "China threatens Taiwan from every angle",
+      "김미애 의원 , 동학혁명 후손 유족수당 지급에  역사 기리되 세금은 공정해야"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
