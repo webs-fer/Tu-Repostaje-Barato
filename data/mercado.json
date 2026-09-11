@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T11:13:16.395Z",
+  "updated_at": "2026-09-11T11:14:31.591Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,28 +7,35 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-09-01",
-    "latest_usd_per_barrel": 96.02,
-    "previous_date": "2026-08-25",
-    "previous_usd_per_barrel": 88.24,
-    "change_7d_pct": 8.82,
-    "signal_eur_l_3d": 0.0265
+    "latest_date": "2026-09-09",
+    "latest_usd_per_barrel": 109.51,
+    "previous_date": "2026-09-02",
+    "previous_usd_per_barrel": 97.59,
+    "change_7d_pct": 12.21,
+    "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-09-09",
-    "latest_rate": 1.1652,
-    "previous_date": "2026-08-31",
-    "previous_rate": 1.1596,
-    "change_7d_pct": 0.48,
-    "signal_eur_l_3d": -0.0007
+    "latest_date": "2026-09-10",
+    "latest_rate": 1.1616,
+    "previous_date": "2026-09-01",
+    "previous_rate": 1.159,
+    "change_7d_pct": 0.22,
+    "signal_eur_l_3d": -0.0003
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 100,
+    "articles_analyzed": 50,
+    "high_risk_matches": 7,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Trump clash with Canada is his latest imperialistic embarrassment | Sidney Blumenthal",
+      "Putin llega a Nueva Delhi para una cumbre de los BRICS marcada por los conflictos globales",
+      "Investors pull money from equity funds as rising oil prices fuel inflation fears",
+      "US natural gas supply and demand to hit record highs in 2026 | Hellenic Shipping News Worldwide",
+      "IPCA , CPI , nova pesquisa Datafolha e mais destaques desta sexta - feira"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
