@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T11:14:31.591Z",
+  "updated_at": "2026-09-12T10:41:00.990Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-09-10",
-    "latest_rate": 1.1616,
-    "previous_date": "2026-09-01",
-    "previous_rate": 1.159,
-    "change_7d_pct": 0.22,
-    "signal_eur_l_3d": -0.0003
+    "latest_date": "2026-09-11",
+    "latest_rate": 1.1592,
+    "previous_date": "2026-09-02",
+    "previous_rate": 1.1578,
+    "change_7d_pct": 0.12,
+    "signal_eur_l_3d": -0.0002
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 7,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Trump clash with Canada is his latest imperialistic embarrassment | Sidney Blumenthal",
-      "Putin llega a Nueva Delhi para una cumbre de los BRICS marcada por los conflictos globales",
-      "Investors pull money from equity funds as rising oil prices fuel inflation fears",
-      "US natural gas supply and demand to hit record highs in 2026 | Hellenic Shipping News Worldwide",
-      "IPCA , CPI , nova pesquisa Datafolha e mais destaques desta sexta - feira"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
