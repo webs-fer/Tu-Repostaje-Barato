@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T11:35:38.059Z",
+  "updated_at": "2026-09-18T11:08:12.953Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0.03
   },
   "eurusd": {
-    "latest_date": "2026-09-16",
-    "latest_rate": 1.1537,
-    "previous_date": "2026-09-07",
-    "previous_rate": 1.1622,
-    "change_7d_pct": -0.73,
-    "signal_eur_l_3d": 0.0011
+    "latest_date": "2026-09-17",
+    "latest_rate": 1.1481,
+    "previous_date": "2026-09-08",
+    "previous_rate": 1.1614,
+    "change_7d_pct": -1.15,
+    "signal_eur_l_3d": 0.0017
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 15,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Real hardship and difficultie lie ahead in fight for Ukraine , says PM top security adviser",
-      "Ce datorie karmică ai în această viață , în funcție de ultima cifră a zilei tale de naștere",
-      "Călin Georgescu merge să caute producători locali în târgul de vechituri din Bihor : „ Bolojan nu uita , Oradea nu e a ta",
-      "Benzina e gasolio verso i 3 euro | cosa centrano gli Houthi e le tasse italiane",
-      "Pri útoku dronov v Rusku zahynuli dvaja ľudia"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
