@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T12:16:23.274Z",
+  "updated_at": "2026-10-05T14:28:40.804Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,18 +17,25 @@
   "eurusd": {
     "latest_date": "2026-10-02",
     "latest_rate": 1.1225,
-    "previous_date": "2026-09-24",
-    "previous_rate": 1.1367,
-    "change_7d_pct": -1.25,
-    "signal_eur_l_3d": 0.0019
+    "previous_date": "2026-09-25",
+    "previous_rate": 1.1403,
+    "change_7d_pct": -1.56,
+    "signal_eur_l_3d": 0.0023
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 96,
+    "articles_analyzed": 50,
+    "high_risk_matches": 6,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "США запровадили санкції проти фінансової мережі , пов  язаної з Росією",
+      "Dont worry about diesel shortages , Government says , as US urges use of reserves",
+      "日本擬追加對俄制裁 、 鎖定影子艦隊 普亭 ： 關係惡化責任在日本 | 國際焦點 | 全球",
+      "Goldman Sachs just added theses 4 companies to its key stock picks",
+      "After Maduro , scrutiny turns to his ally Mireya Blavia de Cisneros over corruption"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
