@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T11:31:46.715Z",
+  "updated_at": "2026-10-24T10:51:51.209Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": -0.0252
   },
   "eurusd": {
-    "latest_date": "2026-10-22",
-    "latest_rate": 1.1205,
-    "previous_date": "2026-10-13",
-    "previous_rate": 1.1188,
-    "change_7d_pct": 0.15,
-    "signal_eur_l_3d": -0.0002
+    "latest_date": "2026-10-23",
+    "latest_rate": 1.1193,
+    "previous_date": "2026-10-14",
+    "previous_rate": 1.1195,
+    "change_7d_pct": -0.02,
+    "signal_eur_l_3d": 0
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 96,
+    "articles_analyzed": 50,
+    "high_risk_matches": 6,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Greece Politics Explained , Who Holds Power in 2026",
+      "Курс доллара в конце октября 2024 : прогноз до 1 ноября",
+      "Dramatično upozorenje :  Život u Europi neće biti lagodan ni ove ni sljedeće godine",
+      "قناة النيل للأخبار | رئيس الأركان الإيرانى : لن نسمح بعودة القطع الحربية الأمريكية المتهالكة إلى مياه الخليج مجددًا",
+      "伊朗 ： 美军无论如何不得进入海湾地区 | 国际"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
