@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T12:43:44.242Z",
+  "updated_at": "2026-10-29T12:53:38.031Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -7,35 +7,28 @@
     "geopolitical": "GDELT DOC 2.0 API (noticias globales, sin API key)"
   },
   "brent": {
-    "latest_date": "2026-10-20",
-    "latest_usd_per_barrel": 115.22,
-    "previous_date": "2026-10-13",
-    "previous_usd_per_barrel": 125.78,
-    "change_7d_pct": -8.4,
-    "signal_eur_l_3d": -0.0252
+    "latest_date": "2026-10-27",
+    "latest_usd_per_barrel": 123.1,
+    "previous_date": "2026-10-20",
+    "previous_usd_per_barrel": 115.22,
+    "change_7d_pct": 6.84,
+    "signal_eur_l_3d": 0.0205
   },
   "eurusd": {
-    "latest_date": "2026-10-27",
-    "latest_rate": 1.115,
-    "previous_date": "2026-10-16",
-    "previous_rate": 1.1253,
-    "change_7d_pct": -0.92,
-    "signal_eur_l_3d": 0.0014
+    "latest_date": "2026-10-28",
+    "latest_rate": 1.1133,
+    "previous_date": "2026-10-19",
+    "previous_rate": 1.1225,
+    "change_7d_pct": -0.82,
+    "signal_eur_l_3d": 0.0012
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 90,
-    "articles_analyzed": 50,
-    "high_risk_matches": 5,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "동해 송정동 주민들 , LS전선 규탄 … 사원아파트 송정동에 건립하라",
-      "Asian Markets Trade Mixed",
-      "السعودية تعترض صواريخ ومسيرات وسط تصاعد المواجهة مع الحوثيين",
-      "전쟁 · 관세 청구서 받아든 유권자 ... 트럼프 외교 심판대 올라 [ 11 · 3 중간선거 … 미국의 선택은 ]( 3 )",
-      "Дизель подорожчав до 111 грн за літр . Ціни на АЗС 27 жовтня 2026 року"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
