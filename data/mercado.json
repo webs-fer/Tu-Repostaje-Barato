@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T12:53:38.031Z",
+  "updated_at": "2026-10-30T12:46:20.844Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": 0.0205
   },
   "eurusd": {
-    "latest_date": "2026-10-28",
-    "latest_rate": 1.1133,
-    "previous_date": "2026-10-19",
-    "previous_rate": 1.1225,
-    "change_7d_pct": -0.82,
-    "signal_eur_l_3d": 0.0012
+    "latest_date": "2026-10-29",
+    "latest_rate": 1.113,
+    "previous_date": "2026-10-20",
+    "previous_rate": 1.1215,
+    "change_7d_pct": -0.76,
+    "signal_eur_l_3d": 0.0011
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 90,
+    "articles_analyzed": 50,
+    "high_risk_matches": 5,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "동해 송정동 주민들 , LS전선 규탄 … 사원아파트 송정동에 건립하라",
+      "Asian Markets Trade Mixed",
+      "السعودية تعترض صواريخ ومسيرات وسط تصاعد المواجهة مع الحوثيين",
+      "전쟁 · 관세 청구서 받아든 유권자 ... 트럼프 외교 심판대 올라 [ 11 · 3 중간선거 … 미국의 선택은 ]( 3 )",
+      "Дизель подорожчав до 111 грн за літр . Ціни на АЗС 27 жовтня 2026 року"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
