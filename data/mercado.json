@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T14:03:29.704Z",
+  "updated_at": "2026-11-04T14:24:22.054Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,12 +15,12 @@
     "signal_eur_l_3d": 0.0205
   },
   "eurusd": {
-    "latest_date": "2026-11-02",
-    "latest_rate": 1.1216,
+    "latest_date": "2026-11-03",
+    "latest_rate": 1.1179,
     "previous_date": "2026-10-23",
     "previous_rate": 1.1193,
-    "change_7d_pct": 0.21,
-    "signal_eur_l_3d": -0.0003
+    "change_7d_pct": -0.13,
+    "signal_eur_l_3d": 0.0002
   },
   "geopolitical": {
     "level": "alto",
@@ -30,11 +30,11 @@
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "Alza de 23 % en productos básicos plantea retos para la inflación y los subsidios en RD",
-      "Le changement dheure expliqué aux Pitchouns  : pourquoi avance - t - on et recule - t - on nos montres deux fois par an  ?",
-      "USA - Les valeurs à suivre à Wall Street - 03 / 11 / 2026 à 11 : 31",
-      "ATX - Trends : AT & S , Palfinger , Erste Group ...",
-      "中信证券策略会 ： 中国基本面韧性强劲 2027年行情宽度有望进一步拓展 _ 东方财富网"
+      "A股头条 ： 接盘资金来了 ， 数百亿级别券商资金已集结 ； 中际旭创  小作文  被澄清 ， 英伟达产业链利空发酵 ， 两融余额降至冰点 - A股头条 - 金融界",
+      "有色 / 贵金属 | 11月份若黄金出现反弹契机 银铂钯价格也将会有所修复 _ 东方财富网",
+      "هل تفتح حرب إيران أبواب الشرق الأوسط أمام الصين ؟",
+      "트럼프  이란 방공시설 완성되자마자 타격 … 이란  美 반응 불충분",
+      "Giá xăng dầu hôm nay 4 / 11 : Tiếp tục giảm , giá dầu thấp nhất 4 tuần"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
