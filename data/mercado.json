@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T12:53:46.610Z",
+  "updated_at": "2026-11-08T13:16:12.306Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -17,25 +17,18 @@
   "eurusd": {
     "latest_date": "2026-11-06",
     "latest_rate": 1.1165,
-    "previous_date": "2026-10-28",
-    "previous_rate": 1.1133,
-    "change_7d_pct": 0.29,
-    "signal_eur_l_3d": -0.0004
+    "previous_date": "2026-10-29",
+    "previous_rate": 1.113,
+    "change_7d_pct": 0.31,
+    "signal_eur_l_3d": -0.0005
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 100,
-    "articles_analyzed": 50,
-    "high_risk_matches": 16,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Robne zalihe teške 93 milijuna eura : Hrvatska ima žitarica za 60 dana , ali lijekova nema ni za prvu pomoć",
-      "Rusia sufera pierderi pe front din cauza motorinei nevandute in SUA",
-      "Удар балістики по Києву : пошкоджений Північний міст , перебої з водою і світлом",
-      "CPC to leave domestic , diesel prices unchanged next week",
-      "Kyiv hit by missiles as Ukraine prepares for talks with Russia and the US"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
