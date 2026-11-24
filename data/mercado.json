@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T17:57:41.103Z",
+  "updated_at": "2026-11-24T17:34:34.733Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,12 +15,12 @@
     "signal_eur_l_3d": 0.0092
   },
   "eurusd": {
-    "latest_date": "2026-11-23",
-    "latest_rate": 1.0939,
+    "latest_date": "2026-11-24",
+    "latest_rate": 1.0963,
     "previous_date": "2026-11-13",
     "previous_rate": 1.1052,
-    "change_7d_pct": -1.02,
-    "signal_eur_l_3d": 0.0015
+    "change_7d_pct": -0.81,
+    "signal_eur_l_3d": 0.0012
   },
   "geopolitical": {
     "level": "alto",
@@ -30,11 +30,11 @@
     "signal_eur_l_3d": 0.009,
     "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
     "sample_titles": [
-      "De puño y letra : Ahora sí , la carrera está lanzada ... y tendremos 16 semanas de máxima tensión electoral",
-      "广州要开莱佛士 ， 文华东方进军重庆 ， 赛里木湖JW万豪明年揭幕",
-      "Стали известны сроки запуска газопровода , который протянется через Бурятию | Байкал - Дейли - Новости Бурятии и Улан - Удэ в реальном времени",
-      "تجاهلتم تحذيراتي بشأن إيران والديمقراطيين .. ترامب يهاجم الأمريكيين بعد خسارة الجمهوريين",
-      "Reporta Irán explosión de dos petroleros por minas en Ormuz"
+      "Sheikh Hasina plans Bangladesh return on December 16 , seeks government - arranged flight : Report",
+      "Kemal Okuyandan COP31 değerlendirmesi :  Bütün şirketlerin yığıldığı bir toplantıdan bir şey beklemek , acemiliktir",
+      "Heizen mit Holz wird diesen Winter deutlich teurer",
+      "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
+      "Москва станет ещё жарче : Климатолог рассказал , какие изменения ждут Россию в ближайшие 30 лет"
     ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
