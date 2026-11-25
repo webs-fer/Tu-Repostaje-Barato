@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T17:34:34.733Z",
+  "updated_at": "2026-11-25T17:06:05.541Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,27 +15,20 @@
     "signal_eur_l_3d": 0.0092
   },
   "eurusd": {
-    "latest_date": "2026-11-24",
-    "latest_rate": 1.0963,
+    "latest_date": "2026-11-25",
+    "latest_rate": 1.0935,
     "previous_date": "2026-11-13",
     "previous_rate": 1.1052,
-    "change_7d_pct": -0.81,
-    "signal_eur_l_3d": 0.0012
+    "change_7d_pct": -1.06,
+    "signal_eur_l_3d": 0.0016
   },
   "geopolitical": {
-    "level": "alto",
-    "score": 78,
-    "articles_analyzed": 50,
-    "high_risk_matches": 3,
-    "signal_eur_l_3d": 0.009,
-    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
-    "sample_titles": [
-      "Sheikh Hasina plans Bangladesh return on December 16 , seeks government - arranged flight : Report",
-      "Kemal Okuyandan COP31 değerlendirmesi :  Bütün şirketlerin yığıldığı bir toplantıdan bir şey beklemek , acemiliktir",
-      "Heizen mit Holz wird diesen Winter deutlich teurer",
-      "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
-      "Москва станет ещё жарче : Климатолог рассказал , какие изменения ждут Россию в ближайшие 30 лет"
-    ]
+    "level": "sin datos",
+    "score": 0,
+    "articles_analyzed": 0,
+    "high_risk_matches": 0,
+    "signal_eur_l_3d": 0,
+    "sample_titles": []
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
