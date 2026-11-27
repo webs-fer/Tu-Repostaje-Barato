@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T16:47:30.781Z",
+  "updated_at": "2026-11-27T16:33:21.686Z",
   "status": "actualizado",
   "sources": {
     "brent": "FRED DCOILBRENTEU CSV (Brent Europe, USD/barril)",
@@ -15,20 +15,27 @@
     "signal_eur_l_3d": -0.0037
   },
   "eurusd": {
-    "latest_date": "2026-11-26",
-    "latest_rate": 1.0975,
-    "previous_date": "2026-11-16",
-    "previous_rate": 1.1014,
-    "change_7d_pct": -0.35,
-    "signal_eur_l_3d": 0.0005
+    "latest_date": "2026-11-27",
+    "latest_rate": 1.0957,
+    "previous_date": "2026-11-17",
+    "previous_rate": 1.0989,
+    "change_7d_pct": -0.29,
+    "signal_eur_l_3d": 0.0004
   },
   "geopolitical": {
-    "level": "sin datos",
-    "score": 0,
-    "articles_analyzed": 0,
-    "high_risk_matches": 0,
-    "signal_eur_l_3d": 0,
-    "sample_titles": []
+    "level": "alto",
+    "score": 90,
+    "articles_analyzed": 50,
+    "high_risk_matches": 5,
+    "signal_eur_l_3d": 0.009,
+    "query": "(oil OR brent OR crude OR petroleum) (war OR conflict OR sanctions OR opec OR russia OR iran OR \"middle east\" OR supply)",
+    "sample_titles": [
+      "Trump Klaim Ingin Putin Mundur dari Agresi di Eropa",
+      "Νοβοροσίσκ : Τρεις τραυματίες και ζημιές από επίθεση με drones",
+      "Маршрут Трампа  в иранском регионе : где проходят  красные линии  Тегерана ? ( IRNA , Иран )",
+      "Επιδρομή της Ουκρανίας με drones στο Ναβρασίσκ της Ρωσίας – Τρεις τραυματίες",
+      "Atcelti brīdinājumi par gaisa telpas iespējamo apdraudējumu Balvu un Ludzas novados"
+    ]
   },
   "formula": "Previsión final = 60% histórico carburantes + 25% Brent + 10% EUR/USD + 5% riesgo geopolítico.",
   "warning": "Estimación orientativa. No es una recomendación financiera ni garantiza precios futuros."
